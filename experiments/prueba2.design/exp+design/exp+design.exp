@@ -1,0 +1,44 @@
+ /*-----------------------------------------------------------------------------------------
+ LIBRARY: DRLPRUEBAS
+ COMPONENT: prueba2
+ PARTITION: design
+ EXPERIMENT: expDesign
+ TEMPLATE: STEADY
+ CREATION DATE: 29/05/2018
+-----------------------------------------------------------------------------------------*/
+
+EXPERIMENT expDesign ON prueba2.design
+   DECLS
+   OBJECTS
+   INIT
+      -- initial values for state variables
+      CombCha.rho_trans = 0
+      CombCha.T_trans = 0
+
+      -- initial values for algebraics
+      HeadLoss_Turb.f_in.W = 1
+      CombCha.A_th_d = 0
+      ThrustMonitor.g.W = 1
+      CombCha.p_out_ch = 100
+
+   BOUNDS
+      -- Set equations for boundaries: boundVar = f(TIME;...)
+      LPRES.Altitude = 0
+      ThrustMonitor.M_out = 100
+      Turbine.r_m_d = 0
+
+   BODY
+      -- report results in file reportAll.rpt
+      REPORT_LIST("reportAll","*",TRUE)
+
+      DEBUG_LEVEL= 1      -- Range 0..4
+      -- Settings for different actions. Valid actions are: SEV_DISABLE, SEV_NONE, SEV_WARNING, SEV_ERROR, SEV_KILLPOINT and SEV_FATALL
+      --eSetErrorAction(ERR_BAD_OPER,SEV_KILLPOINT) -- Detect bad numerical operations (eg division by zero), default is SEV_NONE, recommended is SEV_KILLPOINT
+      --eSetErrorAction(ERR_NAN_INF, SEV_KILLPOINT) -- Detect NaN or Inf values, default is SEV_NONE, recommended is SEV_KILLPOINT
+      TOLTYPE= RELTOL -- convergence criteria
+      TOLERANCE = 1e-06 -- steady solver relative tolerance 
+
+      -- Call the steady state function
+      STEADY()
+
+END EXPERIMENT
