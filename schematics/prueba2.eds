@@ -104,7 +104,7 @@
 	
 	</component>
 
-	<component id="HeadLoss_Turb" library="LPRES" type="Regulator" layer="1"  hotPort="f_in" >
+	<component id="HeadLoss_Turb" library="LPRES" type="Regulator" layer="1"  hotPort="f_out" >
 	
 		<symbol cx="224" cy="88.0264" sx="81" sy="16.9472" dx="238" dy="242" rotation="180" flipY="true" onLabel="true" />
 	
@@ -154,7 +154,7 @@
 	
 	</component>
 
-	<component id="Injector_O" library="LPRES" type="Injector" layer="1"  hotPort="f_in" >
+	<component id="Injector_O" library="LPRES" type="Injector" layer="1"  hotPort="f_out" >
 	
 		<symbol cx="192" cy="126" sx="17" sy="69" dx="458" dy="298" onLabel="true" />
 	
@@ -166,7 +166,7 @@
 	
 	</component>
 
-	<component id="CombCha" library="LPRES" type="CombCha" layer="1"  hotPort="i" >
+	<component id="CombCha" library="LPRES" type="CombCha" layer="1"  hotPort="g" >
 	
 		<symbol cx="218" cy="150" sx="117" sy="181" dx="378" dy="426" onLabel="true" />
 	
@@ -194,7 +194,7 @@
 	
 	</component>
 
-	<component id="FlowMeter_O" library="LPRES" type="FlowMeter" layer="1"  hotPort="f_in" >
+	<component id="FlowMeter_O" library="LPRES" type="FlowMeter" layer="1"  hotPort="f_out" >
 	
 		<symbol cx="244" cy="128" sx="49" sy="73" dx="618" dy="202" onLabel="true" />
 	
@@ -202,7 +202,7 @@
 	
 	</component>
 
-	<component id="FlowMeter_F" library="LPRES" type="FlowMeter" layer="1"  hotPort="i" >
+	<component id="FlowMeter_F" library="LPRES" type="FlowMeter" layer="1"  hotPort="f_out" >
 	
 		<symbol cx="244" cy="128" sx="49" sy="73" dx="-118" dy="346" onLabel="true" />
 	
@@ -223,7 +223,7 @@
 	
 	</component>
 
-	<component id="Turbine" library="LPRES" type="Turbine" layer="1" >
+	<component id="Turbine" library="LPRES" type="Turbine" layer="1"  hotPort="f_out" >
 	
 		<symbol cx="280" cy="249.974" sx="129" sy="92.9472" dx="291.974" dy="12.0264" rotation="90" flipY="true" onLabel="true" />
 	
@@ -241,7 +241,7 @@
 	
 	</component>
 
-	<component id="ControlPanel" library="LPRES" type="ControlPanel" layer="1"  hotPort="i_W" >
+	<component id="ControlPanel" library="LPRES" type="ControlPanel" layer="1"  hotPort="i_Thrust" >
 	
 		<symbol cx="418" cy="226" sx="173" sy="93" dx="382" dy="342" onLabel="true" />
 	
@@ -261,53 +261,9 @@
 	
 	</component>
 
-	<connector id="Connector_1" sShape="Tank_F" sPort="f" eShape="HeadLoss_TF" ePort="f_in"  />
-
-	<connector id="Connector_2" sShape="HeadLoss_TF" sPort="f_out" eShape="Pump_F" ePort="f_in" points="266,74"  intermediate1="1"  />
-
-	<connector id="Connector_3" sShape="Pump_F" sPort="f_out" eShape="FlowMeter_F" ePort="f_in" points="106,202"  intermediate2="1"  />
-
-	<connector id="Connector_6" sShape="SplitFrac" sPort="f_out" eShape="Turbine" ePort="f_in" points="170,266 426,266 426,202"  />
-
-	<connector id="Connector_7" sShape="SplitFrac" sPort="f_b" eShape="Regulator_F" ePort="f_in" points="206,330"  />
-
-	<connector id="Connector_8" sShape="Regulator_F" sPort="f_out" eShape="Junction" ePort="f_in1"  />
-
-	<connector id="Connector_9" sShape="HeadLoss_Turb" sPort="f_out" eShape="Junction" ePort="f_in2"  />
-
-	<connector id="Connector_10" sShape="Turbine" sPort="f_out" eShape="HeadLoss_Turb" ePort="f_in" points="530,322 530,330"  />
-
-	<connector id="Connector_11" sShape="Junction" sPort="f_out" eShape="HeadLoss_Junct" ePort="f_in" points="366,394"  intermediate1="1"  />
-
-	<connector id="Connector_12" sShape="HeadLoss_Junct" sPort="f_out" eShape="Injector_F" ePort="f_in"  />
-
-	<connector id="Connector_13" sShape="Injector_F" sPort="f_out" eShape="CombCha" ePort="f_F" points="586,454"  intermediate1="1"  />
-
-	<connector id="Connector_14" sShape="Injector_O" sPort="f_out" eShape="CombCha" ePort="f_O" points="618,454"  intermediate1="1"  />
-
-	<connector id="Connector_15" sShape="FlowMeter_O" sPort="f_out" eShape="Injector_O" ePort="f_in" points="842,362 842,394"  intermediate1="2"  />
-
-	<connector id="Connector_16" sShape="Pump_O" sPort="f_out" eShape="FlowMeter_O" ePort="f_in"  />
-
 	<connector id="Connector_17" sShape="HeadLoss_TO" sPort="f_out" eShape="Pump_O" ePort="f_in" points="866,74 842,74"  />
 
 	<connector id="Connector_18" sShape="Tank_O" sPort="f" eShape="HeadLoss_TO" ePort="f_in"  />
-
-	<connector id="Connector_19" sShape="Gearbox" sPort="m_in" eShape="Pump_O" ePort="m"  />
-
-	<connector id="Connector_20" sShape="Gearbox" sPort="m_out" eShape="Turbine" ePort="m" points="586,154"  />
-
-	<connector id="Connector_21" sShape="Pump_F" sPort="m" eShape="Turbine" ePort="m" points="586,154"  />
-
-	<connector id="Connector_23" sShape="CombCha" sPort="g" eShape="ThrustMonitor" ePort="g" points="646,662"  />
-
-	<connector id="Connector_24" sShape="ThrustMonitor" sPort="i" eShape="ControlPanel" ePort="i_Thrust" points="718,714"  intermediate1="1"  />
-
-	<connector id="Connector_25" sShape="CombCha" sPort="i" eShape="ControlPanel" ePort="i_Comb"  />
-
-	<connector id="Connector_26" sShape="FlowMeter_O" sPort="i" eShape="ControlPanel" ePort="i_W"  />
-
-	<connector id="Connector_27" sShape="FlowMeter_F" sPort="i" eShape="ControlPanel" ePort="i_W" points="882,474"  />
 
 	<component id="CoolingJacket" library="LPRES" type="CoolingJacket" layer="1"  hotPort="g" >
 	
@@ -326,11 +282,55 @@
 	
 	</component>
 
-	<connector id="Connector_22" sShape="CombCha" sPort="h" eShape="CoolingJacket" ePort="h"  />
+	<connector id="Connector_1" sShape="HeadLoss_TF" sPort="f_out" eShape="Pump_F" ePort="f_in" points="242,74 266,74"  intermediate1="1"  />
 
-	<connector id="Connector_4" sShape="FlowMeter_F" sPort="f_out" eShape="CoolingJacket" ePort="l" points="106,662"  />
+	<connector id="Connector_2" sShape="Tank_F" sPort="f" eShape="HeadLoss_TF" ePort="f_in"  />
 
-	<connector id="Connector_5" sShape="CoolingJacket" sPort="g" eShape="SplitFrac" ePort="f_in" points="474,434"  intermediate1="1"  />
+	<connector id="Connector_3" sShape="Pump_F" sPort="f_out" eShape="FlowMeter_F" ePort="f_in" points="266,208 106,208"  intermediate1="3"  />
+
+	<connector id="Connector_26" sShape="FlowMeter_F" sPort="i" eShape="ControlPanel" ePort="i_W" points="146,464 880,464 880,554"  />
+
+	<connector id="Connector_27" sShape="FlowMeter_O" sPort="i" eShape="ControlPanel" ePort="i_W"  />
+
+	<connector id="Connector_4" sShape="FlowMeter_O" sPort="f_out" eShape="Injector_O" ePort="f_in" points="842,368 650,368"  />
+
+	<connector id="Connector_5" sShape="Injector_O" sPort="f_out" eShape="CombCha" ePort="f_O" points="618,454"  intermediate1="1"  />
+
+	<connector id="Connector_6" sShape="Injector_F" sPort="f_out" eShape="CombCha" ePort="f_F" points="586,454"  />
+
+	<connector id="Connector_7" sShape="CombCha" sPort="i" eShape="ControlPanel" ePort="i_Comb"  />
+
+	<connector id="Connector_8" sShape="ThrustMonitor" sPort="i" eShape="ControlPanel" ePort="i_Thrust" points="714,714 714,570"  />
+
+	<connector id="Connector_9" sShape="CombCha" sPort="g" eShape="ThrustMonitor" ePort="g" points="602,670"  />
+
+	<connector id="Connector_10" sShape="CombCha" sPort="h" eShape="CoolingJacket" ePort="h"  />
+
+	<connector id="Connector_11" sShape="FlowMeter_F" sPort="f_out" eShape="CoolingJacket" ePort="l" points="112,506 112,662"  intermediate1="3"  />
+
+	<connector id="Connector_12" sShape="CoolingJacket" sPort="g" eShape="SplitFrac" ePort="f_in" points="474,520 170,520"  />
+
+	<connector id="Connector_13" sShape="SplitFrac" sPort="f_out" eShape="Turbine" ePort="f_in" points="170,248 472,248 472,202"  intermediate1="3"  />
+
+	<connector id="Connector_14" sShape="Turbine" sPort="f_out" eShape="HeadLoss_Turb" ePort="f_in" points="530,330"  intermediate1="1"  />
+
+	<connector id="Connector_15" sShape="HeadLoss_Turb" sPort="f_out" eShape="Junction" ePort="f_in2"  />
+
+	<connector id="Connector_22" sShape="SplitFrac" sPort="f_b" eShape="Regulator_F" ePort="f_in" points="206,330"  />
+
+	<connector id="Connector_23" sShape="Regulator_F" sPort="f_out" eShape="Junction" ePort="f_in1"  />
+
+	<connector id="Connector_24" sShape="Junction" sPort="f_out" eShape="HeadLoss_Junct" ePort="f_in" points="366,394"  />
+
+	<connector id="Connector_25" sShape="HeadLoss_Junct" sPort="f_out" eShape="Injector_F" ePort="f_in"  />
+
+	<connector id="Connector_16" sShape="Pump_O" sPort="f_out" eShape="FlowMeter_O" ePort="f_in"  />
+
+	<connector id="Connector_19" sShape="Gearbox" sPort="m_in" eShape="Pump_O" ePort="m"  />
+
+	<connector id="Connector_20" sShape="Gearbox" sPort="m_out" eShape="Turbine" ePort="m" points="586,154"  />
+
+	<connector id="Connector_21" sShape="Pump_F" sPort="m" eShape="Turbine" ePort="m" points="586,154"  />
 
 	<bodyEL>
 	<![CDATA[-- EL code of the schematic.

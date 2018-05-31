@@ -4,6 +4,7 @@
   <file name="version.el"/>
   <file name="prueba1.eds"/>
   <file name="prueba2.eds"/>
+  <file name="Camara_comb.eds"/>
  </filedeps>
  <libdeps>
  </libdeps>
