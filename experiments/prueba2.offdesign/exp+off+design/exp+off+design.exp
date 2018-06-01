@@ -1,17 +1,18 @@
  /*-----------------------------------------------------------------------------------------
  LIBRARY: DRLPRUEBAS
  COMPONENT: prueba2
- PARTITION: design
- EXPERIMENT: expDesign
+ PARTITION: offdesign
+ EXPERIMENT: expOffDesign
  TEMPLATE: STEADY
  CREATION DATE: 01/06/2018
 -----------------------------------------------------------------------------------------*/
 
-EXPERIMENT expDesign ON prueba2.design
+EXPERIMENT expOffDesign ON prueba2.offdesign
    DECLS
    OBJECTS
    INIT
       -- initial values for algebraics
+      CombCha.c_star = 0
       HeadLoss_Turb.f_in.Tt = 1
       HeadLoss_Turb.f_in.W = 1
       CombCha.p_out_ch = 100
@@ -19,7 +20,7 @@ EXPERIMENT expDesign ON prueba2.design
 
    BOUNDS
       -- Set equations for boundaries: boundVar = f(TIME;...)
-      LPRES.Altitude = 0
+      LPRES.Altitude = 9000
 
    BODY
       -- report results in file reportAll.rpt

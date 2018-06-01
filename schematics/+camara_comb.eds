@@ -14,25 +14,25 @@
 
 	<component id="Injector_LH2" library="LPRES" type="Injector" layer="1" elPosition="2"  hotPort="f_out" >
 	
-		<symbol cx="192" cy="126" sx="17" sy="69" dx="256" dy="56" onLabel="true" />
+		<symbol cx="192" cy="126" sx="17" sy="69" dx="256" dy="188" onLabel="true" />
 	
-		<label cx="40" cy="12" dx="405" dy="214" />
+		<label cx="40" cy="12" dx="405" dy="346" />
 	
 	</component>
 
 	<component id="Injector_LO2" library="LPRES" type="Injector" layer="1" elPosition="3"  hotPort="f_out" >
 	
-		<symbol cx="192" cy="126" sx="17" sy="69" dx="400" dy="56" onLabel="true" />
+		<symbol cx="192" cy="126" sx="17" sy="69" dx="400" dy="188" onLabel="true" />
 	
-		<label cx="40.5" cy="12" dx="548.5" dy="214" />
+		<label cx="40.5" cy="12" dx="548.5" dy="346" />
 	
 	</component>
 
 	<component id="LH2_circuit" library="LPRES" type="Inlet" layer="1" elPosition="4"  hotPort="f" >
 	
-		<symbol cx="208.029" cy="74" sx="64.9412" sy="85" dx="240" dy="-24" onLabel="true" />
+		<symbol cx="208.029" cy="74" sx="64.9412" sy="85" dx="240" dy="-16" onLabel="true" />
 	
-		<label cx="36.5" cy="12" dx="409.529" dy="90" />
+		<label cx="36.5" cy="12" dx="409.529" dy="98" />
 	
 		<instanceData>
 			<datum id="Tt" value="1500" pos="D" />
@@ -44,9 +44,9 @@
 
 	<component id="CombCha_1" library="LPRES" type="CombCha" layer="1" elPosition="0"  hotPort="g" >
 	
-		<symbol cx="218" cy="150" sx="117" sy="181" dx="320" dy="200" onLabel="true" />
+		<symbol cx="218" cy="150" sx="117" sy="181" dx="280" dy="404" onLabel="true" />
 	
-		<label cx="39.5" cy="12" dx="492" dy="438" />
+		<label cx="39.5" cy="12" dx="452" dy="642" />
 	
 	</component>
 
@@ -63,35 +63,59 @@
 	
 	</component>
 
-	<connector id="Connector_1" sShape="Injector_LH2" sPort="f_out" eShape="CombCha_1" ePort="f_F" points="448,264"  intermediate1="1" elPosition="0"  />
+	<connector id="Connector_1" sShape="Injector_LH2" sPort="f_out" eShape="CombCha_1" ePort="f_F" points="488,344"  intermediate1="1" elPosition="0"  />
 
-	<connector id="Connector_2" sShape="Injector_LO2" sPort="f_out" eShape="CombCha_1" ePort="f_O" points="560,212"  intermediate1="1" elPosition="1"  />
-
-	<connector id="Connector_3" sShape="LO2_circuit" sPort="f" eShape="Injector_LO2" ePort="f_in" elPosition="2"  />
-
-	<connector id="Connector_4" sShape="LH2_circuit" sPort="f" eShape="Injector_LH2" ePort="f_in" elPosition="3"  />
+	<connector id="Connector_2" sShape="Injector_LO2" sPort="f_out" eShape="CombCha_1" ePort="f_O" points="520,344"  intermediate1="1" elPosition="1"  />
 
 	<component id="ThrustMonitor_1" library="LPRES" type="ThrustMonitor" layer="1" elPosition="6"  hotPort="i" >
 	
-		<symbol cx="312" cy="152" sx="121" sy="73.0001" dx="248" dy="340" onLabel="true" />
+		<symbol cx="312" cy="152" sx="121" sy="73.0001" dx="208" dy="544" onLabel="true" />
 	
-		<label cx="50.5" cy="12" dx="502.5" dy="526" />
+		<label cx="50.5" cy="12" dx="462.5" dy="730" />
 	
 	</component>
 
 	<component id="ControlPanel_1" library="LPRES" type="ControlPanel" layer="1" elPosition="7"  hotPort="i_Comb" >
 	
-		<symbol cx="418" cy="226" sx="173" sy="93" dx="300" dy="132" onLabel="true" />
+		<symbol cx="418" cy="226" sx="173" sy="93" dx="272" dy="320" onLabel="true" />
 	
-		<label cx="48" cy="12" dx="662.5" dy="402" />
+		<label cx="48" cy="12" dx="634.5" dy="590" />
 	
 	</component>
 
-	<connector id="Connector_5" sShape="CombCha_1" sPort="g" eShape="ThrustMonitor_1" ePort="g" points="548,436" elPosition="4"  />
+	<connector id="Connector_5" sShape="CombCha_1" sPort="g" eShape="ThrustMonitor_1" ePort="g" points="548,436" elPosition="4" dx="-40" dy="204"  />
 
-	<connector id="Connector_6" sShape="ThrustMonitor_1" sPort="i" eShape="ControlPanel_1" ePort="i_Thrust" points="636,504"  intermediate1="1" elPosition="5"  />
+	<connector id="Connector_6" sShape="ThrustMonitor_1" sPort="i" eShape="ControlPanel_1" ePort="i_Thrust" points="616,344"  intermediate2="1" elPosition="5" dx="-40" dy="204"  />
 
-	<connector id="Connector_7" sShape="CombCha_1" sPort="i" eShape="ControlPanel_1" ePort="i_Comb" points="592,316 636,316"  intermediate1="1" elPosition="6"  />
+	<connector id="Connector_7" sShape="CombCha_1" sPort="i" eShape="ControlPanel_1" ePort="i_Comb" elPosition="6" dx="-40" dy="204"  />
+
+	<component id="FlowMeter_1" library="LPRES" type="FlowMeter" layer="1" elPosition="8"  hotPort="i" >
+	
+		<symbol cx="244" cy="128" sx="49" sy="73" dx="368" dy="80" onLabel="true" />
+	
+		<label cx="41" cy="12" dx="565" dy="242" />
+	
+	</component>
+
+	<component id="FlowMeter_2" library="LPRES" type="FlowMeter" layer="1" elPosition="9"  hotPort="i" >
+	
+		<symbol cx="244" cy="128" sx="49" sy="73" dx="184" dy="64" rotation="180" flipY="true" onLabel="true" />
+	
+		<label cx="41" cy="12" dx="381" dy="226" />
+	
+	</component>
+
+	<connector id="Connector_3" sShape="LH2_circuit" sPort="f" eShape="FlowMeter_2" ePort="f_in" elPosition="7"  />
+
+	<connector id="Connector_4" sShape="LO2_circuit" sPort="f" eShape="FlowMeter_1" ePort="f_in" elPosition="8"  />
+
+	<connector id="Connector_8" sShape="FlowMeter_1" sPort="f_out" eShape="Injector_LO2" ePort="f_in" elPosition="9"  />
+
+	<connector id="Connector_9" sShape="FlowMeter_2" sPort="f_out" eShape="Injector_LH2" ePort="f_in" elPosition="10"  />
+
+	<connector id="Connector_10" sShape="FlowMeter_1" sPort="i" eShape="ControlPanel_1" ePort="i_W" points="772,208"  intermediate1="2" elPosition="11"  />
+
+	<connector id="Connector_11" sShape="FlowMeter_2" sPort="i" eShape="ControlPanel_1" ePort="i_W" points="296,192 296,440 772,440"  intermediate1="6" elPosition="12"  />
 
 	<bodyEL>
 	<![CDATA[-- EL code of the schematic.
@@ -99,8 +123,6 @@
 -- You can edit the parameters clicking over them.
 
 COMPONENT %NAME% 
-
-
 END COMPONENT
 ]]>
 	</bodyEL>

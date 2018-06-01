@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<partitionInfo version="1.0" library="DRLPRUEBAS" component="prueba1" partition="design">
-<noDerivatives value="FALSE"/>
+<partitionInfo version="1.0" library="DRLPRUEBAS" component="prueba1" partition="offdesign">
+<noDerivatives value="TRUE"/>
 <inhibitReductionConstantCoefEqts value="FALSE"/>
 <generatePartitionClass value="FALSE"/>
 <removeNotUsedVars value="FALSE"/>
@@ -16,6 +16,7 @@
 <algebraics>
   <variable name="Pump_F.U"/>
   <variable name="CombCha.M_r"/>
+  <variable name="CombCha.c_star"/>
   <variable name="HeadLoss_Turb.f_in.Tt"/>
   <variable name="HeadLoss_Turb.f_in.W"/>
   <variable name="Pump_O.U"/>
