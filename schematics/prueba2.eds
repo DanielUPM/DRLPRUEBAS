@@ -87,6 +87,10 @@
 	
 		<label cx="39" cy="12" dx="226" dy="336" />
 	
+		<instanceData>
+			<datum id="dp" value="3219188.99" pos="D" />
+		</instanceData>
+	
 	</component>
 
 	<component id="Tank_F" library="LPRES" type="Inlet" layer="1"  hotPort="f" >
