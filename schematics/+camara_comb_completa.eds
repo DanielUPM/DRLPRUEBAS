@@ -37,6 +37,8 @@
 			<datum id="Q_comb" value="14.7e6" pos="D" />
 			<datum id="cp_P" value="3700" pos="D" />
 			<datum id="M_P" value="14.25" pos="D" />
+			<datum id="Type" value="Off_design" pos="P" />
+			<datum id="A_th" value="0.0134109877" pos="D" />
 			<datum id="p_c" value="3275010" pos="D" />
 			<datum id="Cooled" value="Yes" pos="P" />
 			<datum id="AR_r" value="14" pos="D" />
@@ -131,7 +133,7 @@
 		<instanceData>
 			<datum id="Tt" value="151.106354" pos="D" />
 			<datum id="pt" value="3494748.63" pos="D" />
-			<datum id="fluid" value="LH2" pos="D" />
+			<datum id="fluid" value="H2" pos="D" />
 			<datum id="W" value="2.70069069" pos="D" />
 		</instanceData>
 	

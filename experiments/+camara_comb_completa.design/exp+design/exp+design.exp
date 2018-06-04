@@ -1,18 +1,18 @@
  /*-----------------------------------------------------------------------------------------
  LIBRARY: DRLPRUEBAS
- COMPONENT: Camara_comb
+ COMPONENT: Camara_comb_completa
  PARTITION: design
  EXPERIMENT: expDesign
  TEMPLATE: STEADY
- CREATION DATE: 01/06/2018
+ CREATION DATE: 04/06/2018
 -----------------------------------------------------------------------------------------*/
 
-EXPERIMENT expDesign ON Camara_comb.design
+EXPERIMENT expDesign ON Camara_comb_completa.design
    DECLS
    OBJECTS
    INIT
       -- initial values for algebraics
-      CombCha.p_out_ch = 100
+      CombCha_1.p_out_ch = 100
       ThrustMonitor.M_out = 100
 
    BOUNDS
@@ -23,7 +23,7 @@ EXPERIMENT expDesign ON Camara_comb.design
       -- report results in file reportAll.rpt
       REPORT_LIST("reportAll","*",TRUE)
 
-      DEBUG_LEVEL= 1      -- Range 0..4
+      DEBUG_LEVEL= 4      -- Range 0..4
       -- Settings for different actions. Valid actions are: SEV_DISABLE, SEV_NONE, SEV_WARNING, SEV_ERROR, SEV_KILLPOINT and SEV_FATALL
       --eSetErrorAction(ERR_BAD_OPER,SEV_KILLPOINT) -- Detect bad numerical operations (eg division by zero), default is SEV_NONE, recommended is SEV_KILLPOINT
       --eSetErrorAction(ERR_NAN_INF, SEV_KILLPOINT) -- Detect NaN or Inf values, default is SEV_NONE, recommended is SEV_KILLPOINT

@@ -1,17 +1,18 @@
  /*-----------------------------------------------------------------------------------------
  LIBRARY: DRLPRUEBAS
  COMPONENT: Camara_comb_completa
- PARTITION: partition2
- EXPERIMENT: exp2
+ PARTITION: offDesign
+ EXPERIMENT: expOffDesign
  TEMPLATE: STEADY
  CREATION DATE: 04/06/2018
 -----------------------------------------------------------------------------------------*/
 
-EXPERIMENT exp2 ON Camara_comb_completa.partition2
+EXPERIMENT expOffDesign ON Camara_comb_completa.offDesign
    DECLS
    OBJECTS
    INIT
       -- initial values for algebraics
+      CombCha_1.c_star = 0
       CombCha_1.p_out_ch = 100
       ThrustMonitor.M_out = 100
 

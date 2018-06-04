@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<partitionInfo version="1.0" library="DRLPRUEBAS" component="Camara_comb_completa" partition="partition1">
+<partitionInfo version="1.0" library="DRLPRUEBAS" component="Camara_comb_completa" partition="offDesign">
 <noDerivatives value="TRUE"/>
 <inhibitReductionConstantCoefEqts value="FALSE"/>
 <generatePartitionClass value="FALSE"/>
@@ -14,7 +14,9 @@
   <variable name="LPRES.Altitude"/>
 </boundaries>
 <algebraics>
+  <variable name="CombCha_1.c_star"/>
   <variable name="CombCha_1.p_out_ch"/>
+  <variable name="CombCha_1.M_r"/>
   <variable name="ThrustMonitor.M_out"/>
 </algebraics>
 </partitionInfo>

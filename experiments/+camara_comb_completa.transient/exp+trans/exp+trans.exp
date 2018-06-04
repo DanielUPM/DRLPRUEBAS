@@ -1,27 +1,27 @@
  /*-----------------------------------------------------------------------------------------
  LIBRARY: DRLPRUEBAS
- COMPONENT: Camara_comb
+ COMPONENT: Camara_comb_completa
  PARTITION: transient
- EXPERIMENT: expTransient
+ EXPERIMENT: expTrans
  TEMPLATE: TRANSIENT
  CREATION DATE: 04/06/2018
 -----------------------------------------------------------------------------------------*/
 
-EXPERIMENT expTransient ON Camara_comb.transient
+EXPERIMENT expTrans ON Camara_comb_completa.transient
    DECLS
    OBJECTS
    INIT
       -- initial values for state variables
-      CombCha.rho_trans = 0.526
+      CombCha_1.rho_trans = 0.526
 
       -- initial values for algebraics
       ThrustMonitor.g.W = 1
-      ThrustMonitor.M_out = 100
-      CombCha.p_out_ch = 100
+      CombCha_1.p_out_ch = 100000
+      ThrustMonitor.M_out = 1
 
    BOUNDS
       -- Set equations for boundaries: boundVar = f(TIME;...)
-      LPRES.Altitude = 0
+      LPRES.Altitude = 9000
 
    BODY
       -- creates an ASCII file with the results in table format
@@ -34,7 +34,7 @@ EXPERIMENT expTransient ON Camara_comb.transient
       -- Settings for different actions. Valid actions are: SEV_DISABLE, SEV_NONE, SEV_WARNING, SEV_ERROR, SEV_KILLPOINT, SEV_FATAL
       --eSetErrorAction(ERR_BAD_OPER,SEV_KILLPOINT) -- Detect bad numerical operations (eg division by zero), default is SEV_NONE, recommended is SEV_KILLPOINT
       --eSetErrorAction(ERR_NAN_INF, SEV_KILLPOINT) -- Detect NaN or Inf values, default is SEV_NONE, recommended is SEV_KILLPOINT
-      eSetConfig(CFG_FORCE_STOP_CINT,TRUE) -- Force or not to stop the solver each CINT. Sometimes you can speed up the simulation if you select FALSE
+      --eSetConfig(CFG_FORCE_STOP_CINT,TRUE) -- Force or not to stop the solver each CINT. Sometimes you can speed up the simulation if you select FALSE
       -- set tolerances and other important inputs
       REL_ERROR = 1e-06 -- transient solver relative tolerance
       ABS_ERROR = 1e-06 -- transient solver absolute tolerance
