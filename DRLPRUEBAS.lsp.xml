@@ -3,8 +3,9 @@
  <filedeps>
   <file name="version.el"/>
   <file name="prueba1.eds"/>
-  <file name="prueba2.eds"/>
+  <file name="RL10.eds"/>
   <file name="Camara_comb_completa.eds"/>
+  <file name="F1.eds"/>
  </filedeps>
  <libdeps>
  </libdeps>
