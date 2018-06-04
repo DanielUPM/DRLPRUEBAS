@@ -131,6 +131,7 @@
 	
 		<instanceData>
 			<datum id="pt_out" value="3494748.63" pos="D" />
+			<datum id="dp" value="250000" pos="D" />
 		</instanceData>
 	
 	</component>
