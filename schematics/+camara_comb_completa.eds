@@ -21,6 +21,7 @@
 		<instanceData>
 			<datum id="Tt" value="99.1952397" pos="D" />
 			<datum id="pt" value="4597104.18" pos="D" />
+			<datum id="Type" value="Unknown_W" pos="P" />
 			<datum id="W" value="16.3526821" pos="D" />
 		</instanceData>
 	
@@ -28,19 +29,17 @@
 
 	<component id="CombCha_1" library="LPRES" type="CombCha" layer="1" elPosition="2" >
 	
-		<symbol cx="218" cy="150" sx="117" sy="181" dx="384" dy="336" onLabel="true" />
+		<symbol cx="218" cy="150" sx="117" sy="181" dx="472" dy="344" onLabel="true" />
 	
-		<label cx="39.5" cy="12" dx="556" dy="574" />
+		<label cx="39.5" cy="12" dx="644" dy="582" />
 	
 		<instanceData>
 			<datum id="eta_d" value="0.99" pos="D" />
 			<datum id="Q_comb" value="14.7e6" pos="D" />
 			<datum id="cp_P" value="3700" pos="D" />
 			<datum id="M_P" value="14.25" pos="D" />
-			<datum id="Type" value="Off_design" pos="P" />
 			<datum id="A_th" value="0.0134109877" pos="D" />
 			<datum id="p_c" value="3275010" pos="D" />
-			<datum id="Cooled" value="Yes" pos="P" />
 			<datum id="AR_r" value="14" pos="D" />
 			<datum id="A_wet" value="2.521128707" pos="D" />
 			<datum id="AR" value="56.88798558" pos="D" />
@@ -74,55 +73,19 @@
 
 	<connector id="Connector_1" sShape="LO2_circuit" sPort="f" eShape="Injector_O" ePort="f_in" points="794,268"  intermediate2="1" elPosition="0"  />
 
-	<connector id="Connector_2" sShape="Injector_O" sPort="f_out" eShape="CombCha_1" ePort="f_O" points="624,328"  intermediate1="1" elPosition="1"  />
+	<connector id="Connector_2" sShape="Injector_O" sPort="f_out" eShape="CombCha_1" ePort="f_O" points="792,408"  intermediate2="1" elPosition="1"  />
 
-	<connector id="Connector_3" sShape="Injector_F" sPort="f_out" eShape="CombCha_1" ePort="f_F" elPosition="2"  />
+	<connector id="Connector_3" sShape="Injector_F" sPort="f_out" eShape="CombCha_1" ePort="f_F" points="592,408"  intermediate2="1" elPosition="2"  />
 
 	<component id="ThrustMonitor" library="LPRES" type="ThrustMonitor" layer="1" elPosition="7"  hotPort="g" >
 	
-		<symbol cx="312" cy="152" sx="121" sy="73.0001" dx="312" dy="508" onLabel="true" />
+		<symbol cx="312" cy="152" sx="121" sy="73.0001" dx="396" dy="528" onLabel="true" />
 	
-		<label cx="43.5" cy="12" dx="573.5" dy="694" />
-	
-	</component>
-
-	<connector id="Connector_8" sShape="CombCha_1" sPort="g" eShape="ThrustMonitor" ePort="g" points="608,572 608,628" elPosition="7"  />
-
-	<component id="Inlet_1" library="LPRES" type="Inlet" layer="1" elPosition="9"  hotPort="f" >
-	
-		<symbol cx="208.029" cy="74" sx="64.9412" sy="85" dx="-112" dy="464" onLabel="true" />
-	
-		<label cx="23" cy="12" dx="71.0294" dy="578" />
-	
-		<instanceData>
-			<datum id="Tt" value="31.3343538" pos="D" />
-			<datum id="pt" value="7547798.88" pos="D" />
-			<datum id="fluid" value="LH2" pos="D" />
-			<datum id="W" value="2.70069069" pos="D" />
-		</instanceData>
+		<label cx="43.5" cy="12" dx="657.5" dy="714" />
 	
 	</component>
 
-	<component id="CoolingJacket_1" library="LPRES" type="CoolingJacket" layer="1" elPosition="10"  hotPort="h" >
-	
-		<symbol cx="274" cy="138" sx="45" sy="117" dx="4" dy="380" onLabel="true" />
-	
-		<label cx="51.5" cy="12" dx="218" dy="574" />
-	
-		<instanceData>
-			<datum id="L" value="1.475994" pos="D" />
-			<datum id="a" value="0.00100103471" pos="D" />
-			<datum id="b" value="0.00813274823" pos="D" />
-			<datum id="N" value="180" pos="D" />
-			<datum id="k_w" value="16.09" pos="D" />
-			<datum id="t_w" value="0.000583419169" pos="D" />
-		</instanceData>
-	
-	</component>
-
-	<connector id="Connector_6" sShape="Inlet_1" sPort="f" eShape="CoolingJacket_1" ePort="l" points="96,672 260,672"  intermediate1="4" elPosition="10"  />
-
-	<connector id="Connector_7" sShape="CombCha_1" sPort="h" eShape="CoolingJacket_1" ePort="h" elPosition="11"  />
+	<connector id="Connector_8" sShape="CombCha_1" sPort="g" eShape="ThrustMonitor" ePort="g" points="696,572 608,572 608,628 696,628"  intermediate2="4" elPosition="7"  />
 
 	<component id="LH2_circuit" library="LPRES" type="Inlet" layer="1" elPosition="11"  hotPort="f" >
 	
@@ -134,6 +97,7 @@
 			<datum id="Tt" value="151.106354" pos="D" />
 			<datum id="pt" value="3494748.63" pos="D" />
 			<datum id="fluid" value="H2" pos="D" />
+			<datum id="Type" value="Unknown_W" pos="P" />
 			<datum id="W" value="2.70069069" pos="D" />
 		</instanceData>
 	

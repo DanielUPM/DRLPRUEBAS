@@ -15,7 +15,6 @@
 </boundaries>
 <algebraics>
   <variable name="CombCha_1.p_out_ch"/>
-  <variable name="CombCha_1.M_r"/>
   <variable name="ThrustMonitor.M_out"/>
 </algebraics>
 </partitionInfo>

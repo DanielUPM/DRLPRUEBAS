@@ -29,12 +29,24 @@ EXPERIMENT expTrans ON Camara_comb_completa.transient
 
       -- set the debug level (valid range [0,4])
       DEBUG_LEVEL= 4   
+      
+--      FREEZE(CombCha_1.rho_trans)
+--      FREEZE(CombCha_1.T_trans)
+
+--      STEADY()
+
+--      UNFREEZE(CombCha_1.rho_trans)
+--      UNFREEZE(CombCha_1.T_trans)
+
       -- select default integration solver. Valid methods are IDAS (_SPARSE), DASSL(_SPARSE), CVODE_BDF(_SPARSE), CVODE_AM, RK4, EULER, AM1, AM2 and AM4
       IMETHOD= IDAS -- default is DASSL, recommended is either IDAS or IDAS_SPARSE  
+
       -- Settings for different actions. Valid actions are: SEV_DISABLE, SEV_NONE, SEV_WARNING, SEV_ERROR, SEV_KILLPOINT, SEV_FATAL
       --eSetErrorAction(ERR_BAD_OPER,SEV_KILLPOINT) -- Detect bad numerical operations (eg division by zero), default is SEV_NONE, recommended is SEV_KILLPOINT
       --eSetErrorAction(ERR_NAN_INF, SEV_KILLPOINT) -- Detect NaN or Inf values, default is SEV_NONE, recommended is SEV_KILLPOINT
+
       --eSetConfig(CFG_FORCE_STOP_CINT,TRUE) -- Force or not to stop the solver each CINT. Sometimes you can speed up the simulation if you select FALSE
+
       -- set tolerances and other important inputs
       REL_ERROR = 1e-06 -- transient solver relative tolerance
       ABS_ERROR = 1e-06 -- transient solver absolute tolerance

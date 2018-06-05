@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE experiment SYSTEM "DTDFILE_FULLPATH">
 <experiment version="1.4.0">
 	<experimentViews>
 		<tab name="Tab_1">
@@ -10,64 +9,20 @@
 					<var name="#ESI"/>
 					<var name="#Case"/>
 					<var name="#Point"/>
-					<var name="FlowMeter_F.f_out.W"/>
-					<var name="FlowMeter_F.f_out.Tt"/>
-					<var name="FlowMeter_F.f_out.pt"/>
-					<var name="CoolingJacket.g.W"/>
-					<var name="CoolingJacket.g.Tt"/>
-					<var name="CoolingJacket.g.pt"/>
-					<var name="Turbine.f_out.W"/>
-					<var name="Turbine.f_out.Tt"/>
-					<var name="Turbine.f_out.pt"/>
-					<var name="HeadLoss_Turb.f_out.W"/>
-					<var name="HeadLoss_Turb.f_out.Tt"/>
-					<var name="HeadLoss_Turb.f_out.pt"/>
-					<var name="Regulator_F.dp_d"/>
-					<var name="Regulator_F.f_out.W"/>
-					<var name="Regulator_F.f_out.Tt"/>
-					<var name="Regulator_F.f_out.pt"/>
-					<var name="Junction.f_out.W"/>
-					<var name="Junction.f_out.Tt"/>
-					<var name="Junction.f_out.pt"/>
-					<var name="HeadLoss_Junct.f_out.W"/>
-					<var name="HeadLoss_Junct.f_out.Tt"/>
-					<var name="HeadLoss_Junct.f_out.pt"/>
 					<var name="Injector_F.f_out.W"/>
 					<var name="Injector_F.f_out.T"/>
 					<var name="Injector_F.f_out.p"/>
-					<var name="FlowMeter_O.f_out.W"/>
-					<var name="FlowMeter_O.f_out.Tt"/>
-					<var name="FlowMeter_O.f_out.pt"/>
 					<var name="Injector_O.f_out.W"/>
 					<var name="Injector_O.f_out.T"/>
 					<var name="Injector_O.f_out.p"/>
-					<var name="CombCha.g.W"/>
-					<var name="CombCha.OF"/>
-					<var name="CombCha.OF_st"/>
-					<var name="CombCha.g.Tt"/>
-					<var name="CombCha.g.pt"/>
-					<var name="CombCha.A_th_d"/>
 					<var name="ThrustMonitor.A_out"/>
 					<var name="ThrustMonitor.p_amb"/>
-					<var name="CombCha.p_out_ch"/>
 					<var name="ThrustMonitor.p_out"/>
 					<var name="ThrustMonitor.M_out"/>
 					<var name="ThrustMonitor.T_out"/>
 					<var name="ThrustMonitor.v_out"/>
-					<var name="Pump_F.A_in_d"/>
-					<var name="Pump_F.r_m_d"/>
-					<var name="Pump_O.A_in_d"/>
-					<var name="Pump_O.r_m_d"/>
-					<var name="Turbine.A_in_d"/>
-					<var name="Turbine.r_m_d"/>
 					<var name="Injector_F.A_d"/>
 					<var name="Injector_O.A_d"/>
-					<var name="ControlPanel.c_star"/>
-					<var name="ControlPanel.C_E"/>
-					<var name="ControlPanel.Isp"/>
-					<var name="ControlPanel.Isp_0"/>
-					<var name="ControlPanel.W_tot"/>
-					<var name="ControlPanel.Thrust"/>
 				</table>
 			</tableWindow>
 		</tab>
