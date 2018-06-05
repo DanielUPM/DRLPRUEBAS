@@ -1,13 +1,13 @@
  /*-----------------------------------------------------------------------------------------
  LIBRARY: DRLPRUEBAS
- COMPONENT: Camara_comb_completa
- PARTITION: offDesign
- EXPERIMENT: expOffDesign
+ COMPONENT: CC_completa_OFFD
+ PARTITION: offDesign_steady
+ EXPERIMENT: expOff
  TEMPLATE: STEADY
- CREATION DATE: 04/06/2018
+ CREATION DATE: 05/06/2018
 -----------------------------------------------------------------------------------------*/
 
-EXPERIMENT expOffDesign ON Camara_comb_completa.offDesign
+EXPERIMENT expOff ON CC_completa_OFFD.offDesign_steady
    DECLS
    OBJECTS
    INIT
