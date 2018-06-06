@@ -15,8 +15,8 @@
 </boundaries>
 <algebraics>
   <variable name="CombCha_1.W_F"/>
-  <variable name="CombCha_1.c_star"/>
   <variable name="CombCha_1.phi"/>
+  <variable name="ThrustMonitor.g.Tt"/>
   <variable name="CombCha_1.p_out_ch"/>
   <variable name="ThrustMonitor.M_out"/>
 </algebraics>
