@@ -18,8 +18,7 @@
   <variable name="CombCha_1.g.Tt"/>
 </dynamics>
 <algebraics>
-  <variable name="CombCha_1.W_F"/>
-  <variable name="CombCha_1.phi"/>
+  <variable name="Injector_F.PR"/>
   <variable name="ThrustMonitor.g.W"/>
   <variable name="CombCha_1.p_out_ch"/>
   <variable name="ThrustMonitor.M_out"/>

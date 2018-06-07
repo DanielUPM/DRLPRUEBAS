@@ -1,18 +1,23 @@
  /*-----------------------------------------------------------------------------------------
  LIBRARY: DRLPRUEBAS
  COMPONENT: CC_completa_OFFD
- PARTITION: offDesign_steady
- EXPERIMENT: expOff
+ PARTITION: transient
+ EXPERIMENT: expSt_valid
  TEMPLATE: STEADY
  CREATION DATE: 07/06/2018
 -----------------------------------------------------------------------------------------*/
 
-EXPERIMENT expOff ON CC_completa_OFFD.offDesign_steady
+EXPERIMENT expSt_valid ON CC_completa_OFFD.transient
    DECLS
    OBJECTS
    INIT
+      -- initial values for state variables
+      CombCha_1.rho_trans = 1
+      CombCha_1.g.Tt = 100
+
       -- initial values for algebraics
-      Injector_F.PR = 10
+      Injector_F.PR = 5
+      ThrustMonitor.g.W = 1
       CombCha_1.p_out_ch = 100
       ThrustMonitor.M_out = 100
 
