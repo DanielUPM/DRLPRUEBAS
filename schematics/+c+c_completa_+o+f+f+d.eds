@@ -43,6 +43,9 @@
 			<datum id="p_c" value="3275010" pos="D" />
 			<datum id="AR_r" value="14" pos="D" />
 			<datum id="A_wet" value="2.521128707" pos="D" />
+			<datum id="T_ch" value="3180.92667" pos="D" />
+			<datum id="rho_ch" value="1.45944999" pos="D" />
+			<datum id="mfr_ch" value="19.0533728" pos="D" />
 			<datum id="AR" value="56.88798558" pos="D" />
 		</instanceData>
 	
