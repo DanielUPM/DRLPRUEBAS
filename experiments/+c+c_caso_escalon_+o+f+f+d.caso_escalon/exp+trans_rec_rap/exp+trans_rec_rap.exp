@@ -2,46 +2,42 @@
  LIBRARY: DRLPRUEBAS
  COMPONENT: CC_caso_escalon_OFFD
  PARTITION: caso_escalon
- EXPERIMENT: expTransient
+ EXPERIMENT: expTrans_rec_rap
  TEMPLATE: TRANSIENT
  CREATION DATE: 12/06/2018
 -----------------------------------------------------------------------------------------*/
 
-EXPERIMENT expTransient ON CC_caso_escalon_OFFD.caso_escalon
+EXPERIMENT expTrans_rec_rap ON CC_caso_escalon_OFFD.caso_escalon
    DECLS
    OBJECTS
    INIT
       -- initial values for state variables
-     
-	   CombCha_1.rho_trans = 1
-      CombCha_1.g.Tt = 2500
+      CombCha_1.rho_trans = 0
+      CombCha_1.g.Tt = 1
 
       -- initial values for algebraics
-      Injector_F.PR = 2
-      ThrustMonitor.g.W = 10
-      CombCha_1.p_out_ch = 2500
-      ThrustMonitor.M_out = 2
+      Injector_F.PR = 10
+      ThrustMonitor.g.W = 1
+      CombCha_1.p_out_ch = 100
+      ThrustMonitor.M_out = 100
 
    BOUNDS
       -- Set equations for boundaries: boundVar = f(TIME;...)
-      LH2_circuit.Tt = step(TIME,3)*50+151.106354
-      LH2_circuit.pt = step(TIME,3)*500000+3494748.63
-		
-	  -- LH2_circuit.Tt = 151.106354
-     -- LH2_circuit.pt = 3494748.63
-      LPRES.Altitude = 9000
+      LH2_circuit.Tt = 151.106354+TIME*1000
+      LH2_circuit.pt = 3494748.63+TIME*1000
+      LPRES.Altitude = 0
 
    BODY
       -- creates an ASCII file with the results in table format
       -- REPORT_TABLE("results.rpt", "*",TRUE)
 
       -- set the debug level (valid range [0,4])
-      DEBUG_LEVEL= 4   
+      DEBUG_LEVEL= 1   
       -- select default integration solver. Valid methods are IDAS (_SPARSE), DASSL(_SPARSE), CVODE_BDF(_SPARSE), CVODE_AM, RK4, EULER, AM1, AM2 and AM4
       IMETHOD= IDAS -- default is DASSL, recommended is either IDAS or IDAS_SPARSE  
       -- Settings for different actions. Valid actions are: SEV_DISABLE, SEV_NONE, SEV_WARNING, SEV_ERROR, SEV_KILLPOINT, SEV_FATAL
-      --eSetErrorAction(ERR_BAD_OPER,SEV_KILLPOINT) -- Detect bad numerical operations (eg division by zero), default is SEV_NONE, recommended is SEV_KILLPOINT
-      --eSetErrorAction(ERR_NAN_INF, SEV_KILLPOINT) -- Detect NaN or Inf values, default is SEV_NONE, recommended is SEV_KILLPOINT
+      eSetErrorAction(ERR_BAD_OPER,SEV_KILLPOINT) -- Detect bad numerical operations (eg division by zero), default is SEV_NONE, recommended is SEV_KILLPOINT
+      eSetErrorAction(ERR_NAN_INF, SEV_KILLPOINT) -- Detect NaN or Inf values, default is SEV_NONE, recommended is SEV_KILLPOINT
       eSetConfig(CFG_FORCE_STOP_CINT,TRUE) -- Force or not to stop the solver each CINT. Sometimes you can speed up the simulation if you select FALSE
       -- set tolerances and other important inputs
       REL_ERROR = 1e-06 -- transient solver relative tolerance
@@ -55,6 +51,6 @@ EXPERIMENT expTransient ON CC_caso_escalon_OFFD.caso_escalon
       -- simulate a transient in range[TIME,TSTOP] reporting every CINT
       TIME = 0
       TSTOP = 15
-      CINT = 0.01
+      CINT = 0.1
       INTEG()
 END EXPERIMENT
