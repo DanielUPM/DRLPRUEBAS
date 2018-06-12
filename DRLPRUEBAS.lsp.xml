@@ -7,6 +7,11 @@
   <file name="Camara_comb_completa.eds"/>
   <file name="F1.eds"/>
   <file name="CC_completa_OFFD.eds"/>
+  <file name="CC_Gen_OFFD.eds"/>
+  <file name="CC_GG_completa.eds"/>
+  <file name="CC_Cool_OFFD.eds"/>
+  <file name="CC_CJ_completa.eds"/>
+  <file name="CC_caso_escalon_OFFD.eds"/>
  </filedeps>
  <libdeps>
  </libdeps>
