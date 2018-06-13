@@ -130,7 +130,17 @@
 
 	<connector id="Connector_5" sShape="CombCha_1" sPort="h" eShape="CoolingJacket" ePort="h" points="476,520 476,496" elPosition="8"  />
 
-	<connector id="Connector_6" sShape="CoolingJacket" sPort="g" eShape="Injector_F" ePort="f_in" points="304,440 304,252" elPosition="9"  />
+	<component id="Regulator_1" library="LPRES" type="Regulator" layer="1" elPosition="9"  hotPort="f_out" >
+	
+		<symbol cx="224" cy="88.0264" sx="81" sy="16.9472" dx="124" dy="136" onLabel="true" />
+	
+		<label cx="38.5" cy="12" dx="304.5" dy="230" />
+	
+	</component>
+
+	<connector id="Connector_6" sShape="CoolingJacket" sPort="g" eShape="Regulator_1" ePort="f_in" points="288,224" elPosition="9"  />
+
+	<connector id="Connector_7" sShape="Regulator_1" sPort="f_out" eShape="Injector_F" ePort="f_in" points="432,224" elPosition="10"  />
 
 	<bodyEL>
 	<![CDATA[-- EL code of the schematic.

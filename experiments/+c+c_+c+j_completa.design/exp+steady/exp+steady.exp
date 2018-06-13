@@ -20,6 +20,7 @@ EXPERIMENT expSteady ON CC_CJ_completa.design
    BOUNDS
       -- Set equations for boundaries: boundVar = f(TIME;...)
       LPRES.Altitude = 9000
+      Regulator_1.dp_d = 100000
 
    BODY
       -- report results in file reportAll.rpt

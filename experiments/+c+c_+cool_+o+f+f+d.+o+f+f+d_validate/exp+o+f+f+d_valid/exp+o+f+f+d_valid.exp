@@ -13,15 +13,16 @@ EXPERIMENT expOFFD_valid ON CC_Cool_OFFD.OFFD_validate
    INIT
       -- initial values for state variables
       CombCha_1.rho_trans = 1
-      CombCha_1.g.Tt = 1000
+      CombCha_1.g.Tt = 2500
       CoolingJacket.rho_trans = 1
-      CoolingJacket.g.Tt = 1
+      CoolingJacket.g.Tt = 100
 
       -- initial values for algebraics
-      ThrustMonitor.g.W = 10
+      Injector_F.PR = 2
+      ThrustMonitor.g.W = 100
       CombCha_1.p_out_ch = 1000
-      CoolingJacket.v = 1
-      ThrustMonitor.M_out = 10
+      CoolingJacket.v = 1000
+      ThrustMonitor.M_out = 2
 
    BOUNDS
       -- Set equations for boundaries: boundVar = f(TIME;...)
@@ -31,10 +32,10 @@ EXPERIMENT expOFFD_valid ON CC_Cool_OFFD.OFFD_validate
       -- report results in file reportAll.rpt
       REPORT_LIST("reportAll","*",TRUE)
 
-      DEBUG_LEVEL= 4      -- Range 0..4
+      DEBUG_LEVEL= 1      -- Range 0..4
       -- Settings for different actions. Valid actions are: SEV_DISABLE, SEV_NONE, SEV_WARNING, SEV_ERROR, SEV_KILLPOINT and SEV_FATALL
---      eSetErrorAction(ERR_BAD_OPER,SEV_KILLPOINT) -- Detect bad numerical operations (eg division by zero), default is SEV_NONE, recommended is SEV_KILLPOINT
-  --    eSetErrorAction(ERR_NAN_INF, SEV_KILLPOINT) -- Detect NaN or Inf values, default is SEV_NONE, recommended is SEV_KILLPOINT
+      --eSetErrorAction(ERR_BAD_OPER,SEV_KILLPOINT) -- Detect bad numerical operations (eg division by zero), default is SEV_NONE, recommended is SEV_KILLPOINT
+      --eSetErrorAction(ERR_NAN_INF, SEV_KILLPOINT) -- Detect NaN or Inf values, default is SEV_NONE, recommended is SEV_KILLPOINT
       TOLTYPE= RELTOL -- convergence criteria
       TOLERANCE = 1e-06 -- steady solver relative tolerance 
 

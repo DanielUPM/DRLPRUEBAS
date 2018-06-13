@@ -12,6 +12,7 @@
 <generateMaxSignificantDigits value="FALSE"/>
 <boundaries>
   <variable name="LPRES.Altitude"/>
+  <variable name="Regulator_1.dp_d"/>
 </boundaries>
 <algebraics>
   <variable name="CombCha_1.M_r"/>

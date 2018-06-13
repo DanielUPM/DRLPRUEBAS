@@ -55,7 +55,7 @@
 	
 		<instanceData>
 			<datum id="Type" value="Off_design" pos="P" />
-			<datum id="A" value="0.00047224929" pos="D" />
+			<datum id="A" value="0.000478441426" pos="D" />
 		</instanceData>
 	
 	</component>
@@ -129,9 +129,9 @@
 			<datum id="N" value="180" pos="D" />
 			<datum id="k_w" value="16.09" pos="D" />
 			<datum id="t_w" value="0.000583419" pos="D" />
-			<datum id="T_ch" value="164.180851" pos="D" />
-			<datum id="rho_ch" value="10.2848971" pos="D" />
-			<datum id="mfr_ch" value="2.70069069" pos="D" />
+			<datum id="T_ch" value="150." pos="D" />
+			<datum id="rho_ch" value="10" pos="D" />
+			<datum id="mfr_ch" value="2" pos="D" />
 			<datum id="temp_ch" value="0.058" pos="D" />
 		</instanceData>
 	
