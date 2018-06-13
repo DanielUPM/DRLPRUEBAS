@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<partitionInfo version="1.0" library="DRLPRUEBAS" component="RL10" partition="design">
-<noDerivatives value="TRUE"/>
+<partitionInfo version="1.0" library="DRLPRUEBAS" component="CC_Gen_OFFD" partition="OFFDvalidate">
+<noDerivatives value="FALSE"/>
 <inhibitReductionConstantCoefEqts value="FALSE"/>
 <generatePartitionClass value="FALSE"/>
 <removeNotUsedVars value="FALSE"/>
@@ -13,15 +13,18 @@
 <boundaries>
   <variable name="LPRES.Altitude"/>
 </boundaries>
+<dynamics>
+  <variable name="CombCha_1_1.rho_trans"/>
+  <variable name="CombCha_1_1.g.Tt"/>
+  <variable name="GasGen_1.rho_trans"/>
+  <variable name="GasGen_1.g.Tt"/>
+</dynamics>
 <algebraics>
-  <variable name="CombCha.M_r"/>
-  <variable name="HeadLoss_Turb.f_in.Tt"/>
-  <variable name="HeadLoss_Turb.f_in.W"/>
-  <variable name="ThrustMonitor.g.Tt"/>
-  <variable name="CombCha.p_out_ch"/>
+  <variable name="GasGen_1.W_F"/>
+  <variable name="CombCha_1_1.f_O.fluid[Comb_prod]"/>
+  <variable name="Injector_F_1.PR"/>
+  <variable name="ThrustMonitor.g.W"/>
   <variable name="ThrustMonitor.M_out"/>
-  <variable name="Pump_F.U"/>
-  <variable name="Pump_O.U"/>
-  <variable name="Turbine.U"/>
+  <variable name="CombCha_1_1.p_out_ch"/>
 </algebraics>
 </partitionInfo>

@@ -22,7 +22,6 @@
 			<datum id="Tt" value="99.1952397" pos="D" />
 			<datum id="pt" value="4597104.18" pos="D" />
 			<datum id="Type" value="Unknown_W" pos="P" />
-			<datum id="W" value="16.3526821" pos="D" />
 		</instanceData>
 	
 	</component>
@@ -35,18 +34,15 @@
 	
 		<instanceData>
 			<datum id="eta_d" value="0.99" pos="D" />
-			<datum id="Q_comb" value="14.7e6" pos="D" />
+			<datum id="Q_comb" value="14700000" pos="D" />
 			<datum id="cp_P" value="3700" pos="D" />
 			<datum id="M_P" value="14.25" pos="D" />
 			<datum id="Type" value="Off_design" pos="P" />
-			<datum id="A_th" value="0.0134109877" pos="D" />
-			<datum id="p_c" value="3275010" pos="D" />
+			<datum id="A_th" value="0.0134006297" pos="D" />
+			<datum id="Cooled" value="Yes" pos="P" />
 			<datum id="AR_r" value="14" pos="D" />
-			<datum id="A_wet" value="2.521128707" pos="D" />
-			<datum id="T_ch" value="3180.92667" pos="D" />
-			<datum id="rho_ch" value="1.45944999" pos="D" />
-			<datum id="mfr_ch" value="19.0533728" pos="D" />
-			<datum id="AR" value="56.88798558" pos="D" />
+			<datum id="A_wet" value="2.52112871" pos="D" />
+			<datum id="AR" value="56.8879856" pos="D" />
 		</instanceData>
 	
 	</component>
@@ -59,8 +55,7 @@
 	
 		<instanceData>
 			<datum id="Type" value="Off_design" pos="P" />
-			<datum id="A" value="0.00178349971" pos="D" />
-			<datum id="W" value="2.70069069" pos="D" />
+			<datum id="A" value="0.00047224929" pos="D" />
 		</instanceData>
 	
 	</component>
@@ -74,7 +69,6 @@
 		<instanceData>
 			<datum id="Type" value="Off_design" pos="P" />
 			<datum id="A" value="0.000580606872" pos="D" />
-			<datum id="W" value="16.3526821" pos="D" />
 		</instanceData>
 	
 	</component>
@@ -87,29 +81,11 @@
 	
 	</component>
 
-	<component id="LH2_circuit" library="LPRES" type="Inlet" layer="1" elPosition="5"  hotPort="f" >
-	
-		<symbol cx="208.029" cy="74" sx="64.9412" sy="85" dx="-68" dy="364" onLabel="true" />
-	
-		<label cx="36.5" cy="12" dx="101.529" dy="478" />
-	
-		<instanceData>
-			<datum id="Tt" value="151.106354" pos="D" />
-			<datum id="pt" value="3494748.63" pos="D" />
-			<datum id="fluid" value="H2" pos="D" />
-			<datum id="Type" value="Unknown_W" pos="P" />
-			<datum id="W" value="2.70069069" pos="D" />
-		</instanceData>
-	
-	</component>
+	<connector id="Connector_1" sShape="LO2_circuit" sPort="f" eShape="Injector_O" ePort="f_in" points="654,280"  intermediate2="1" elPosition="0"  />
 
-	<component id="CoolingJacket_1" library="LPRES" type="CoolingJacket" layer="1" elPosition="6"  hotPort="g" >
-	
-		<symbol cx="274" cy="138" sx="45" sy="117" dx="24" dy="392" onLabel="true" />
-	
-		<label cx="51.5" cy="12" dx="238" dy="586" />
-	
-	</component>
+	<connector id="Connector_2" sShape="Injector_O" sPort="f_out" eShape="CombCha_1" ePort="f_O" points="652,420"  intermediate2="1" elPosition="1"  />
+
+	<connector id="Connector_3" sShape="Injector_F" sPort="f_out" eShape="CombCha_1" ePort="f_F" points="452,420"  intermediate2="1" elPosition="2"  />
 
 	<component id="Regulator_1" library="LPRES" type="Regulator" layer="1" elPosition="7"  hotPort="f_out" >
 	
@@ -117,21 +93,57 @@
 	
 		<label cx="38.5" cy="12" dx="300.5" dy="210" />
 	
+		<instanceData>
+			<datum id="Type" value="Known_dp" pos="P" />
+		</instanceData>
+	
 	</component>
 
-	<connector id="Connector_1" sShape="LO2_circuit" sPort="f" eShape="Injector_O" ePort="f_in" points="634,260"  intermediate2="1" elPosition="0" dx="20" dy="20"  />
+	<connector id="Connector_8" sShape="CombCha_1" sPort="g" eShape="ThrustMonitor" ePort="g" points="556,584 468,584 468,640 556,640"  intermediate2="4" elPosition="3"  />
 
-	<connector id="Connector_2" sShape="Injector_O" sPort="f_out" eShape="CombCha_1" ePort="f_O" points="632,400"  intermediate2="1" elPosition="1" dx="20" dy="20"  />
+	<component id="LH2_circuit_1" library="LPRES" type="Inlet" layer="1" elPosition="8"  hotPort="f" >
+	
+		<symbol cx="208.029" cy="74" sx="64.9412" sy="85" dx="-64" dy="424" onLabel="true" />
+	
+		<label cx="43.5" cy="12" dx="91.529" dy="538" />
+	
+		<instanceData>
+			<datum id="Tt" value="31.3343538" pos="D" />
+			<datum id="pt" value="7547798.88" pos="D" />
+			<datum id="fluid" value="LH2" pos="D" />
+			<datum id="Type" value="Unknown_W" pos="P" />
+		</instanceData>
+	
+	</component>
 
-	<connector id="Connector_3" sShape="Injector_F" sPort="f_out" eShape="CombCha_1" ePort="f_F" points="432,400"  intermediate2="1" elPosition="2" dx="20" dy="20"  />
+	<component id="CoolingJacket" library="LPRES" type="CoolingJacket" layer="1" elPosition="9"  hotPort="g" >
+	
+		<symbol cx="274" cy="138" sx="45" sy="117" dx="28" dy="404" onLabel="true" />
+	
+		<label cx="44.5" cy="12" dx="249" dy="598" />
+	
+		<instanceData>
+			<datum id="L" value="1.475994" pos="D" />
+			<datum id="a" value="0.001001035" pos="D" />
+			<datum id="b" value="0.008132748" pos="D" />
+			<datum id="N" value="180" pos="D" />
+			<datum id="k_w" value="16.09" pos="D" />
+			<datum id="t_w" value="0.000583419" pos="D" />
+			<datum id="T_ch" value="164.180851" pos="D" />
+			<datum id="rho_ch" value="10.2848971" pos="D" />
+			<datum id="mfr_ch" value="2.70069069" pos="D" />
+			<datum id="temp_ch" value="0.058" pos="D" />
+		</instanceData>
+	
+	</component>
 
-	<connector id="Connector_8" sShape="CombCha_1" sPort="g" eShape="ThrustMonitor" ePort="g" points="536,564 448,564 448,620 536,620"  intermediate2="4" elPosition="3" dx="20" dy="20"  />
+	<connector id="Connector_4" sShape="LH2_circuit_1" sPort="f" eShape="CoolingJacket" ePort="l" points="144,624 284,624" elPosition="7"  />
 
-	<connector id="Connector_4" sShape="LH2_circuit" sPort="f" eShape="CoolingJacket_1" ePort="l" points="120,564"  intermediate1="2" elPosition="4" dx="20" dy="20"  />
+	<connector id="Connector_5" sShape="CombCha_1" sPort="h" eShape="CoolingJacket" ePort="h" points="496,540 320,540" elPosition="8"  />
 
-	<connector id="Connector_5" sShape="CoolingJacket_1" sPort="g" eShape="Regulator_1" ePort="f_in" points="272,456 272,184" elPosition="5" dx="20" dy="20"  />
+	<connector id="Connector_6" sShape="Regulator_1" sPort="f_out" eShape="Injector_F" ePort="f_in" points="452,204"  intermediate1="2" elPosition="6"  />
 
-	<connector id="Connector_6" sShape="Regulator_1" sPort="f_out" eShape="Injector_F" ePort="f_in" points="432,184"  intermediate1="2" elPosition="6" dx="20" dy="20"  />
+	<connector id="Connector_7" sShape="CoolingJacket" sPort="g" eShape="Regulator_1" ePort="f_in" points="308,488" elPosition="9"  />
 
 	<bodyEL>
 	<![CDATA[-- EL code of the schematic.
@@ -139,8 +151,6 @@
 -- You can edit the parameters clicking over them.
 
 COMPONENT %NAME% 
-
-
 END COMPONENT
 ]]>
 	</bodyEL>

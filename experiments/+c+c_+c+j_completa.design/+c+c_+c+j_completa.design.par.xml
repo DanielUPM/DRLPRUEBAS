@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<partitionInfo version="1.0" library="DRLPRUEBAS" component="RL10" partition="design">
+<partitionInfo version="1.0" library="DRLPRUEBAS" component="CC_CJ_completa" partition="design">
 <noDerivatives value="TRUE"/>
 <inhibitReductionConstantCoefEqts value="FALSE"/>
 <generatePartitionClass value="FALSE"/>
@@ -14,14 +14,10 @@
   <variable name="LPRES.Altitude"/>
 </boundaries>
 <algebraics>
-  <variable name="CombCha.M_r"/>
-  <variable name="HeadLoss_Turb.f_in.Tt"/>
-  <variable name="HeadLoss_Turb.f_in.W"/>
-  <variable name="ThrustMonitor.g.Tt"/>
-  <variable name="CombCha.p_out_ch"/>
+  <variable name="CombCha_1.M_r"/>
+  <variable name="CombCha_1.c_star"/>
+  <variable name="CoolingJacket.h.T"/>
+  <variable name="CombCha_1.p_out_ch"/>
   <variable name="ThrustMonitor.M_out"/>
-  <variable name="Pump_F.U"/>
-  <variable name="Pump_O.U"/>
-  <variable name="Turbine.U"/>
 </algebraics>
 </partitionInfo>
