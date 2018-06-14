@@ -108,7 +108,7 @@
 			</plotWindow>
 		</tab>
 	</experimentViews>
-	<watch width="266" height="103" visible="true" pos="right" >
+	<watch width="266" height="128" visible="true" pos="right" >
 		<currentTab name="view"/>
 		<variables>
 			<tab name="initial"> 
@@ -140,7 +140,7 @@
 			</tab> 
 		</layout>
 	</watch>
-	<outputWindow height="103" width="1440" visible="true" pos="bottom" />
+	<outputWindow height="128" width="1440" visible="true" pos="bottom" />
 	<alarms globalEnabled="TRUE">
 	</alarms>
 

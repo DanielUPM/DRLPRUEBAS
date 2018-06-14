@@ -1,32 +1,32 @@
  /*-----------------------------------------------------------------------------------------
  LIBRARY: DRLPRUEBAS
- COMPONENT: CC_Cool_OFFD
- PARTITION: Transient
- EXPERIMENT: expTransient
+ COMPONENT: CC_caso_escalon_OFFD
+ PARTITION: caso_escalon
+ EXPERIMENT: expTrans_sin
  TEMPLATE: TRANSIENT
- CREATION DATE: 13/06/2018
+ CREATION DATE: 14/06/2018
 -----------------------------------------------------------------------------------------*/
 
-EXPERIMENT expTransient ON CC_Cool_OFFD.Transient
+EXPERIMENT expTrans_sin ON CC_caso_escalon_OFFD.caso_escalon
    DECLS
    OBJECTS
    INIT
-
       -- initial values for state variables
-      CombCha_1.rho_trans = 1.46
-      CombCha_1.g.Tt = 3170
-      CoolingJacket.rho_trans = 10
-      CoolingJacket.g.Tt = 164
+     
+	   CombCha_1.rho_trans = 1
+      CombCha_1.g.Tt = 2500
 
       -- initial values for algebraics
+		
       Injector_F.PR = 2
       ThrustMonitor.g.W = 10
-      CombCha_1.p_out_ch = 1000
-      CoolingJacket.v = 100
+      CombCha_1.p_out_ch = 2500
       ThrustMonitor.M_out = 2
 
    BOUNDS
       -- Set equations for boundaries: boundVar = f(TIME;...)
+      LH2_circuit.Tt = 100*sin((2*(PI/0.032))*TIME-PI/2)+251.106354
+      LH2_circuit.pt = 100000*sin((2*(PI/0.032))*TIME-PI/2)+3594748.63
       LPRES.Altitude = 9000
 
    BODY
@@ -34,10 +34,7 @@ EXPERIMENT expTransient ON CC_Cool_OFFD.Transient
       -- REPORT_TABLE("results.rpt", "*",TRUE)
 
       -- set the debug level (valid range [0,4])
-      DEBUG_LEVEL= 4 
-		
-		--STEADY()
-		
+      DEBUG_LEVEL= 4   
       -- select default integration solver. Valid methods are IDAS (_SPARSE), DASSL(_SPARSE), CVODE_BDF(_SPARSE), CVODE_AM, RK4, EULER, AM1, AM2 and AM4
       IMETHOD= IDAS -- default is DASSL, recommended is either IDAS or IDAS_SPARSE  
       -- Settings for different actions. Valid actions are: SEV_DISABLE, SEV_NONE, SEV_WARNING, SEV_ERROR, SEV_KILLPOINT, SEV_FATAL

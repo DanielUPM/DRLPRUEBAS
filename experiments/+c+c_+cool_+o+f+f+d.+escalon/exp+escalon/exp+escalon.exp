@@ -1,17 +1,16 @@
  /*-----------------------------------------------------------------------------------------
  LIBRARY: DRLPRUEBAS
  COMPONENT: CC_Cool_OFFD
- PARTITION: Transient
- EXPERIMENT: expTransient
+ PARTITION: Escalon
+ EXPERIMENT: expEscalon
  TEMPLATE: TRANSIENT
- CREATION DATE: 13/06/2018
+ CREATION DATE: 14/06/2018
 -----------------------------------------------------------------------------------------*/
 
-EXPERIMENT expTransient ON CC_Cool_OFFD.Transient
+EXPERIMENT expEscalon ON CC_Cool_OFFD.Escalon
    DECLS
    OBJECTS
    INIT
-
       -- initial values for state variables
       CombCha_1.rho_trans = 1.46
       CombCha_1.g.Tt = 3170
@@ -27,22 +26,26 @@ EXPERIMENT expTransient ON CC_Cool_OFFD.Transient
 
    BOUNDS
       -- Set equations for boundaries: boundVar = f(TIME;...)
-      LPRES.Altitude = 9000
+      
+		LH2_circuit_1.Tt = step(TIME,3)*5+31.3343538
+      LH2_circuit_1.pt = step(TIME,3)*50000+7547798.88
+		
+		--LH2_circuit_1.Tt = 31.3343538
+      --LH2_circuit_1.pt = 7547798.88
+      
+		LPRES.Altitude = 9000
 
    BODY
       -- creates an ASCII file with the results in table format
       -- REPORT_TABLE("results.rpt", "*",TRUE)
 
       -- set the debug level (valid range [0,4])
-      DEBUG_LEVEL= 4 
-		
-		--STEADY()
-		
+      DEBUG_LEVEL= 4   
       -- select default integration solver. Valid methods are IDAS (_SPARSE), DASSL(_SPARSE), CVODE_BDF(_SPARSE), CVODE_AM, RK4, EULER, AM1, AM2 and AM4
       IMETHOD= IDAS -- default is DASSL, recommended is either IDAS or IDAS_SPARSE  
       -- Settings for different actions. Valid actions are: SEV_DISABLE, SEV_NONE, SEV_WARNING, SEV_ERROR, SEV_KILLPOINT, SEV_FATAL
-      --eSetErrorAction(ERR_BAD_OPER,SEV_KILLPOINT) -- Detect bad numerical operations (eg division by zero), default is SEV_NONE, recommended is SEV_KILLPOINT
-      --eSetErrorAction(ERR_NAN_INF, SEV_KILLPOINT) -- Detect NaN or Inf values, default is SEV_NONE, recommended is SEV_KILLPOINT
+     -- eSetErrorAction(ERR_BAD_OPER,SEV_KILLPOINT) -- Detect bad numerical operations (eg division by zero), default is SEV_NONE, recommended is SEV_KILLPOINT
+     -- eSetErrorAction(ERR_NAN_INF, SEV_KILLPOINT) -- Detect NaN or Inf values, default is SEV_NONE, recommended is SEV_KILLPOINT
       eSetConfig(CFG_FORCE_STOP_CINT,TRUE) -- Force or not to stop the solver each CINT. Sometimes you can speed up the simulation if you select FALSE
       -- set tolerances and other important inputs
       REL_ERROR = 1e-06 -- transient solver relative tolerance

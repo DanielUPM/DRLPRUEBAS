@@ -122,6 +122,7 @@
 			<datum id="N" value="180" pos="D" />
 			<datum id="k_w" value="16.09" pos="D" />
 			<datum id="t_w" value=".000583419169" pos="D" />
+			<datum id="temp_ch" value="0.058" pos="D" />
 		</instanceData>
 	
 	</component>

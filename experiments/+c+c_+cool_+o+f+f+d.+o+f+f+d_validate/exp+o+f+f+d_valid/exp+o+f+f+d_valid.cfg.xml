@@ -65,7 +65,7 @@
 			</tab> 
 		</layout>
 	</watch>
-	<outputWindow height="71" width="1920" visible="true" pos="bottom" />
+	<outputWindow height="71" width="1440" visible="true" pos="bottom" />
 	<alarms globalEnabled="TRUE">
 	</alarms>
 
