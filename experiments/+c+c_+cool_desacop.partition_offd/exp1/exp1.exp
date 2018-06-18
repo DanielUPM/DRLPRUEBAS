@@ -1,25 +1,31 @@
  /*-----------------------------------------------------------------------------------------
  LIBRARY: DRLPRUEBAS
- COMPONENT: CC_CJ_completa
- PARTITION: design
- EXPERIMENT: expSteady
+ COMPONENT: CC_Cool_desacop
+ PARTITION: partition_offd
+ EXPERIMENT: exp1
  TEMPLATE: STEADY
- CREATION DATE: 18/06/2018
+ CREATION DATE: 15/06/2018
 -----------------------------------------------------------------------------------------*/
 
-EXPERIMENT expSteady ON CC_CJ_completa.design
+EXPERIMENT exp1 ON CC_Cool_desacop.partition_offd
    DECLS
    OBJECTS
    INIT
+      -- initial values for state variables
+      CombCha_1.rho_trans = 1
+      CombCha_1.g.Tt = 2500
+      CoolingJacket.rho_trans = 10
+      CoolingJacket.g.Tt = 100
+
       -- initial values for algebraics
-      CombCha_1.c_star = 1
-      CoolingJacket.h.T = 1000
-      CombCha_1.p_out_ch = 1000
+      Injector_F.PR = 10
+      ThrustMonitor.g.W = 10
+      CombCha_1.p_out_ch = 100
+      CoolingJacket.v = 100
       ThrustMonitor.M_out = 10
 
    BOUNDS
       -- Set equations for boundaries: boundVar = f(TIME;...)
-      Injector_F.PR = 1.06709556
       LPRES.Altitude = 9000
 
    BODY

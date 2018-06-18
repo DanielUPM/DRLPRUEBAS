@@ -4,7 +4,7 @@
  PARTITION: OFFD_validate
  EXPERIMENT: expOFFD_valid
  TEMPLATE: STEADY
- CREATION DATE: 13/06/2018
+ CREATION DATE: 18/06/2018
 -----------------------------------------------------------------------------------------*/
 
 EXPERIMENT expOFFD_valid ON CC_Cool_OFFD.OFFD_validate
@@ -14,15 +14,15 @@ EXPERIMENT expOFFD_valid ON CC_Cool_OFFD.OFFD_validate
       -- initial values for state variables
       CombCha_1.rho_trans = 1
       CombCha_1.g.Tt = 2500
-      CoolingJacket.rho_trans = 1
-      CoolingJacket.g.Tt = 200
+      CoolingJacket.rho_trans = 10
+      CoolingJacket.g.Tt = 100
 
       -- initial values for algebraics
-      Injector_F.PR = 1.5
+      Injector_F.PR = 10
       ThrustMonitor.g.W = 10
-      CombCha_1.p_out_ch = 100
+      CombCha_1.p_out_ch = 1000
       CoolingJacket.v = 100
-      ThrustMonitor.M_out = 2
+      ThrustMonitor.M_out = 100
 
    BOUNDS
       -- Set equations for boundaries: boundVar = f(TIME;...)

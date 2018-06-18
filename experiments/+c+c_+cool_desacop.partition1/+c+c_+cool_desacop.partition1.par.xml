@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<partitionInfo version="1.0" library="DRLPRUEBAS" component="CC_CJ_completa" partition="design">
+<partitionInfo version="1.0" library="DRLPRUEBAS" component="CC_Cool_desacop" partition="partition1">
 <noDerivatives value="TRUE"/>
 <inhibitReductionConstantCoefEqts value="FALSE"/>
 <generatePartitionClass value="FALSE"/>
@@ -11,14 +11,13 @@
 <generateParInfoHTML value="TRUE"/>
 <generateMaxSignificantDigits value="FALSE"/>
 <boundaries>
-  <variable name="Injector_F.PR"/>
+  <variable name="CoolingJacket.l.W"/>
   <variable name="LPRES.Altitude"/>
 </boundaries>
 <algebraics>
-  <variable name="CombCha_1.M_r"/>
-  <variable name="CombCha_1.c_star"/>
-  <variable name="CoolingJacket.h.T"/>
+  <variable name="Injector_F.PR"/>
   <variable name="CombCha_1.p_out_ch"/>
+  <variable name="CombCha_1.M_r"/>
   <variable name="ThrustMonitor.M_out"/>
 </algebraics>
 </partitionInfo>

@@ -24,8 +24,8 @@ EXPERIMENT expTransient ON CC_caso_escalon_OFFD.caso_escalon
 
    BOUNDS
       -- Set equations for boundaries: boundVar = f(TIME;...)
-      LH2_circuit.Tt = step(TIME,3)*50+151.106354
-      LH2_circuit.pt = step(TIME,3)*500000+3494748.63
+      LH2_circuit.Tt = step(TIME,3)*6+151.106354
+      LH2_circuit.pt = step(TIME,3)*50000+3494748.63
 		
 	  -- LH2_circuit.Tt = 151.106354
      -- LH2_circuit.pt = 3494748.63

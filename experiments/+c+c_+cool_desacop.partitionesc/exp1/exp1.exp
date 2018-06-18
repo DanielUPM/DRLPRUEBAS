@@ -1,43 +1,44 @@
  /*-----------------------------------------------------------------------------------------
  LIBRARY: DRLPRUEBAS
- COMPONENT: CC_Cool_OFFD
- PARTITION: Transient
- EXPERIMENT: expTransient
+ COMPONENT: CC_Cool_desacop
+ PARTITION: partitionesc
+ EXPERIMENT: exp1
  TEMPLATE: TRANSIENT
- CREATION DATE: 13/06/2018
+ CREATION DATE: 15/06/2018
 -----------------------------------------------------------------------------------------*/
 
-EXPERIMENT expTransient ON CC_Cool_OFFD.Transient
+EXPERIMENT exp1 ON CC_Cool_desacop.partitionesc
    DECLS
    OBJECTS
    INIT
-
       -- initial values for state variables
-      CombCha_1.rho_trans = 1.45616301
-      CombCha_1.g.Tt = 3188.10639
-      CoolingJacket.rho_trans = 10.262982
-      CoolingJacket.g.Tt = 164.531438
+      CombCha_1.rho_trans = 1
+      CombCha_1.g.Tt = 2500
+      CoolingJacket.rho_trans = 10
+      CoolingJacket.g.Tt = 100
 
       -- initial values for algebraics
-      Injector_F.PR = 1.06709557
-      ThrustMonitor.g.W = 19.053373
-      CombCha_1.p_out_ch = 4252.08651
-      CoolingJacket.v = 25.2460255
-      ThrustMonitor.M_out = 4.53180181
+      Injector_F.PR = 10
+      ThrustMonitor.g.W = 10
+      CombCha_1.p_out_ch = 100
+      CoolingJacket.v = 100
+      ThrustMonitor.M_out = 10
 
    BOUNDS
       -- Set equations for boundaries: boundVar = f(TIME;...)
       LPRES.Altitude = 9000
+      --LH2_circuit_1.Tt = 31.3343538
+      --LH2_circuit_1.pt = 7547798.88
+		LH2_circuit_1.Tt = step(TIME,3)*50+31.3343538
+      LH2_circuit_1.pt = step(TIME,3)*500000+7547798.88
+    
 
    BODY
       -- creates an ASCII file with the results in table format
       -- REPORT_TABLE("results.rpt", "*",TRUE)
 
       -- set the debug level (valid range [0,4])
-      DEBUG_LEVEL= 4 
-		
-		--STEADY()
-		
+      DEBUG_LEVEL= 4   
       -- select default integration solver. Valid methods are IDAS (_SPARSE), DASSL(_SPARSE), CVODE_BDF(_SPARSE), CVODE_AM, RK4, EULER, AM1, AM2 and AM4
       IMETHOD= IDAS -- default is DASSL, recommended is either IDAS or IDAS_SPARSE  
       -- Settings for different actions. Valid actions are: SEV_DISABLE, SEV_NONE, SEV_WARNING, SEV_ERROR, SEV_KILLPOINT, SEV_FATAL
