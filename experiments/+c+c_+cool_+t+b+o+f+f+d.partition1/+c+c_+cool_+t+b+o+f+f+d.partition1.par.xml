@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<partitionInfo version="1.0" library="DRLPRUEBAS" component="CC_Cool_OFFD" partition="Transient">
+<partitionInfo version="1.0" library="DRLPRUEBAS" component="CC_Cool_TBOFFD" partition="partition1">
 <noDerivatives value="FALSE"/>
 <inhibitReductionConstantCoefEqts value="FALSE"/>
 <generatePartitionClass value="FALSE"/>
@@ -20,11 +20,12 @@
   <variable name="CoolingJacket.g.Tt"/>
 </dynamics>
 <algebraics>
-  <variable name="Injector_O.PR"/>
+  <variable name="Injector_F.PR"/>
   <variable name="ThrustMonitor.g.W"/>
   <variable name="CombCha_1.p_out_ch"/>
   <variable name="CombCha_1.M_r"/>
   <variable name="CoolingJacket.v"/>
   <variable name="ThrustMonitor.M_out"/>
+  <variable name="Turbine.U"/>
 </algebraics>
 </partitionInfo>

@@ -10,10 +10,6 @@
 					<var name="#Case"/>
 					<var name="#Point"/>
 					<var name="TIME"/>
-					<var name="CombCha_1.g.Tt"/>
-					<var name="CombCha_1.g.pt"/>
-					<var name="CombCha_1.rho_trans"/>
-					<var name="CombCha_1.g.W"/>
 					<var name="Injector_F.PR"/>
 					<var name="Injector_O.PR"/>
 					<var name="Injector_F.f_out.W"/>
@@ -30,66 +26,114 @@
 					<var name="ThrustMonitor.v_out"/>
 					<var name="Injector_F.A_d"/>
 					<var name="Injector_O.A_d"/>
-					<var name="CombCha_1.g.Tt'"/>
-					<var name="CombCha_1.p_out_ch"/>
-					<var name="CombCha_1.rho_trans'"/>
 					<var name="CoolingJacket.g.Tt"/>
 					<var name="CoolingJacket.g.Tt'"/>
 					<var name="CoolingJacket.rho_trans"/>
 					<var name="CoolingJacket.rho_trans'"/>
 					<var name="CoolingJacket.v"/>
+					<var name="CombCha.A_th"/>
+					<var name="CombCha.A_th_d"/>
+					<var name="CombCha.OF"/>
+					<var name="CombCha.T_c"/>
+					<var name="CombCha.c_star"/>
+					<var name="CombCha.g.Tt"/>
+					<var name="CombCha.g.Tt'"/>
+					<var name="CombCha.g.W"/>
+					<var name="CombCha.g.pt"/>
+					<var name="CombCha.h.Q"/>
+					<var name="CombCha.rho_trans"/>
+					<var name="CombCha.rho_trans'"/>
+					<var name="ControlPanel.Isp"/>
+					<var name="ControlPanel.Thrust"/>
+					<var name="CoolingJacket.g.W"/>
+					<var name="CoolingJacket.g.pt"/>
+					<var name="CoolingJacket.h.Q"/>
+					<var name="CoolingJacket.l.W"/>
+					<var name="Gearbox.m_in.N"/>
+					<var name="HeadLoss_Junct.dp_d"/>
+					<var name="HeadLoss_Junct.dpr"/>
+					<var name="HeadLoss_Junct.f_out.Tt"/>
+					<var name="HeadLoss_Junct.f_out.W"/>
+					<var name="HeadLoss_Junct.f_out.pt"/>
+					<var name="HeadLoss_TF.dp_d"/>
+					<var name="HeadLoss_TF.dpr"/>
+					<var name="HeadLoss_TF.f_out.Tt"/>
+					<var name="HeadLoss_TF.f_out.W"/>
+					<var name="HeadLoss_TF.f_out.pt"/>
+					<var name="HeadLoss_TO.dp_d"/>
+					<var name="HeadLoss_TO.dpr"/>
+					<var name="HeadLoss_TO.f_out.Tt"/>
+					<var name="HeadLoss_TO.f_out.W"/>
+					<var name="HeadLoss_TO.f_out.pt"/>
+					<var name="HeadLoss_Turb.dp_d"/>
+					<var name="HeadLoss_Turb.dpr"/>
+					<var name="HeadLoss_Turb.f_out.Tt"/>
+					<var name="HeadLoss_Turb.f_out.W"/>
+					<var name="HeadLoss_Turb.f_out.pt"/>
+					<var name="Injector_F.M_out"/>
+					<var name="Injector_F.f_in.Tt"/>
+					<var name="Injector_F.f_in.W"/>
+					<var name="Injector_F.f_in.pt"/>
+					<var name="Injector_F.f_out.p_c"/>
+					<var name="Injector_O.M_out"/>
+					<var name="Injector_O.f_in.Tt"/>
+					<var name="Injector_O.f_in.W"/>
+					<var name="Injector_O.f_in.pt"/>
+					<var name="Pump_F.U"/>
+					<var name="Pump_F.f_out.Tt"/>
+					<var name="Pump_F.f_out.W"/>
+					<var name="Pump_F.f_out.pt"/>
+					<var name="Pump_F.m.Power"/>
+					<var name="Pump_F.phi_d"/>
+					<var name="Pump_F.psi_d"/>
+					<var name="Pump_F.tau"/>
+					<var name="Pump_O.A_in_d"/>
+					<var name="Pump_O.Power"/>
+					<var name="Pump_O.U"/>
+					<var name="Pump_O.dp"/>
+					<var name="Pump_O.f_out.Tt"/>
+					<var name="Pump_O.f_out.W"/>
+					<var name="Pump_O.f_out.pt"/>
+					<var name="Pump_O.m.N"/>
+					<var name="Pump_O.phi_d"/>
+					<var name="Pump_O.psi_d"/>
+					<var name="Pump_O.tau"/>
+					<var name="Regulator_F.dp"/>
+					<var name="Regulator_F.dpr"/>
+					<var name="Regulator_F.f_out.Tt"/>
+					<var name="Regulator_F.f_out.W"/>
+					<var name="Regulator_F.f_out.pt"/>
+					<var name="Turbine.A_in_d"/>
+					<var name="Turbine.Power"/>
+					<var name="Turbine.U"/>
+					<var name="Turbine.W"/>
+					<var name="Turbine.f_out.Tt"/>
+					<var name="Turbine.f_out.W"/>
+					<var name="Turbine.f_out.pt"/>
+					<var name="Turbine.m.N"/>
+					<var name="Turbine.phi_d"/>
+					<var name="Turbine.psi_d"/>
+					<var name="Turbine.tau"/>
 				</table>
 			</tableWindow>
 		</tab>
 		<tab name="Tab_2">
-			<plotWindow title="Plot_2" x="0" y="0" dx="350" dy="250" state="maximized">
-				<plot id="Plot_2" graphType="plot_time">
-						<title value="">
-							<font family="MS Shell Dlg 2"/>
-						</title>
-						<axeX variableName="TIME">
-							<titleAxe value="Tiempo (s)"/>
-							<scale scaleType="auto"/>
-						</axeX>
-						<axeY>
-							<titleAxe value="Temperatura"/>
-							<scale scaleType="auto"/>
-						</axeY>
-						<axeY2 isShowed="TRUE">
-							<titleAxe value=""/>
-							<scale scaleType="auto"/>
-						</axeY2>
-						<layout>
-							<font family="MS Shell Dlg 2" size="12"/>
-							<majorGrid/>
-							<minorGrid/>
-						</layout>
-						<legend>
-							<font family="MS Shell Dlg 2"/>
-						</legend>
-						<chartStyles>
-							<var name="CombCha_1.g.Tt" nick=""/>
-							<var name="CombCha_1.g.Tt&#39;" nick="" isY2="TRUE"/>
-						</chartStyles>
-					
-					</plot>
-			</plotWindow>
-			<plotWindow title="Plot_1" x="0" y="0" dx="350" dy="250" state="maximized">
+			<plotWindow title="Plot_1" x="0" y="0" dx="350" dy="250">
 				<plot id="Plot_1" graphType="plot_time">
 						<title value="">
 							<font family="MS Shell Dlg 2"/>
 						</title>
 						<axeX variableName="TIME">
 							<titleAxe value="Tiempo (s)"/>
-							<scale minCurrent="-0.365313" maxCurrent="4.68006" scaleType="current"/>
+							<scale minCurrent="-0.338601" maxCurrent="12.5839" scaleType="current"/>
 						</axeX>
 						<axeY>
-							<titleAxe value="Densidad"/>
-							<scale minCurrent="0.966788" maxCurrent="1.99259" scaleType="current"/>
+							<titleAxe value="Temperatura"/>
+							<scale minCurrent="2175.97" maxCurrent="3233.08" scaleType="current"/>
 						</axeY>
 						<axeY2 isShowed="TRUE">
 							<titleAxe value=""/>
-							<scale minCurrent="-43.3212" maxCurrent="59.2586" scaleType="current"/>
+							<scale minCurrent="-51696.5" maxCurrent="22499.6" scaleType="current"/>
 						</axeY2>
 						<layout>
 							<font family="MS Shell Dlg 2" size="12"/>
@@ -100,28 +144,28 @@
 							<font family="MS Shell Dlg 2"/>
 						</legend>
 						<chartStyles>
-							<var name="CombCha_1.rho_trans" nick=""/>
-							<var name="CombCha_1.rho_trans&#39;" nick="" isY2="TRUE"/>
+							<var name="CombCha.g.Tt" nick=""/>
+							<var name="CombCha.g.Tt&#39;" nick="" isY2="TRUE"/>
 						</chartStyles>
 					
 					</plot>
 			</plotWindow>
-			<plotWindow title="Plot_4" x="0" y="0" dx="350" dy="250" state="maximized">
-				<plot id="Plot_4" graphType="plot_time">
+			<plotWindow title="Plot_2" x="0" y="0" dx="350" dy="250">
+				<plot id="Plot_2" graphType="plot_time">
 						<title value="">
 							<font family="MS Shell Dlg 2"/>
 						</title>
 						<axeX variableName="TIME">
 							<titleAxe value="Tiempo (s)"/>
-							<scale minCurrent="-0.0199425" maxCurrent="5.01372" scaleType="current"/>
+							<scale minCurrent="-0.116732" maxCurrent="12.4903" scaleType="current"/>
 						</axeX>
 						<axeY>
-							<titleAxe value="Temperatura"/>
-							<scale minCurrent="2308.75" maxCurrent="4095.85" scaleType="current"/>
+							<titleAxe value="Densidad"/>
+							<scale minCurrent="0.994485" maxCurrent="1.57904" scaleType="current"/>
 						</axeY>
 						<axeY2 isShowed="TRUE">
 							<titleAxe value=""/>
-							<scale minCurrent="-70484.7" maxCurrent="85886.6" scaleType="current"/>
+							<scale minCurrent="-10.4596" maxCurrent="38.2537" scaleType="current"/>
 						</axeY2>
 						<layout>
 							<font family="MS Shell Dlg 2" size="12"/>
@@ -132,29 +176,25 @@
 							<font family="MS Shell Dlg 2"/>
 						</legend>
 						<chartStyles>
-							<var name="CombCha_1.g.Tt" nick=""/>
-							<var name="CombCha_1.g.Tt&#39;" nick="" isY2="TRUE"/>
+							<var name="CombCha.rho_trans" nick=""/>
+							<var name="CombCha.rho_trans&#39;" nick="" isShowed="false" isY2="TRUE"/>
 						</chartStyles>
 					
 					</plot>
 			</plotWindow>
-			<plotWindow title="Plot_3" x="0" y="0" dx="350" dy="250" state="maximized">
+			<plotWindow title="Plot_3" x="350" y="0" dx="350" dy="250">
 				<plot id="Plot_3" graphType="plot_time">
 						<title value="">
 							<font/>
 						</title>
 						<axeX variableName="TIME">
 							<titleAxe value="TIME"/>
-							<scale minCurrent="0.0206718" maxCurrent="5.00258" scaleType="current"/>
+							<scale scaleType="auto"/>
 						</axeX>
 						<axeY>
 							<titleAxe value=""/>
-							<scale minCurrent="1.10629" maxCurrent="1.7232" scaleType="current"/>
+							<scale scaleType="auto"/>
 						</axeY>
-						<axeY2>
-							<titleAxe value=""/>
-							<scale minCurrent="-29.3525" maxCurrent="23.5252" scaleType="current"/>
-						</axeY2>
 						<layout>
 							<font/>
 							<majorGrid/>
@@ -164,15 +204,14 @@
 							<font/>
 						</legend>
 						<chartStyles>
-							<var name="CombCha_1.rho_trans" nick=""/>
-							<var name="CombCha_1.rho_trans&#39;" nick="" isY2="TRUE"/>
+							<var name="CombCha.g.Tt" nick=""/>
 						</chartStyles>
 					
 					</plot>
 			</plotWindow>
 		</tab>
 		<tab name="Tab_3">
-			<plotWindow title="Plot_1" x="0" y="0" dx="350" dy="250" state="maximized">
+			<plotWindow title="Plot_1" x="0" y="0" dx="350" dy="250">
 				<plot id="Plot_1" graphType="plot_time">
 						<title value="">
 							<font family="MS Shell Dlg 2"/>
@@ -204,7 +243,7 @@
 					
 					</plot>
 			</plotWindow>
-			<plotWindow title="Plot_2" x="0" y="0" dx="350" dy="250" state="maximized">
+			<plotWindow title="Plot_2" x="0" y="0" dx="350" dy="250">
 				<plot id="Plot_2" graphType="plot_time">
 						<title value="">
 							<font family="MS Shell Dlg 2"/>
@@ -236,7 +275,7 @@
 					
 					</plot>
 			</plotWindow>
-			<plotWindow title="Plot_3" x="0" y="0" dx="350" dy="250" state="maximized">
+			<plotWindow title="Plot_3" x="0" y="0" dx="350" dy="250">
 				<plot id="Plot_3" graphType="plot_time">
 						<title value="">
 							<font family="MS Shell Dlg 2"/>
@@ -268,22 +307,22 @@
 					
 					</plot>
 			</plotWindow>
-			<plotWindow title="Plot_4" x="0" y="0" dx="350" dy="250" state="maximized">
+			<plotWindow title="Plot_4" x="0" y="0" dx="350" dy="250">
 				<plot id="Plot_4" graphType="plot_time">
 						<title value="">
 							<font family="MS Shell Dlg 2"/>
 						</title>
 						<axeX variableName="TIME">
 							<titleAxe value="Tiempo (s)"/>
-							<scale minCurrent="-0.0643432" maxCurrent="5.06166" scaleType="current"/>
+							<scale minCurrent="0.697136" maxCurrent="30.4943" scaleType="current"/>
 						</axeX>
 						<axeY>
 							<titleAxe value="Densidad"/>
-							<scale minCurrent="8.54317" maxCurrent="11.5" scaleType="current"/>
+							<scale minCurrent="7.95771" maxCurrent="15.1423" scaleType="current"/>
 						</axeY>
-						<axeY2>
+						<axeY2 isShowed="TRUE">
 							<titleAxe value=""/>
-							<scale minCurrent="-146.403" maxCurrent="100" scaleType="current"/>
+							<scale minCurrent="-197.194" maxCurrent="411.095" scaleType="current"/>
 						</axeY2>
 						<layout>
 							<font family="MS Shell Dlg 2" size="12"/>
@@ -295,7 +334,39 @@
 						</legend>
 						<chartStyles>
 							<var name="CoolingJacket.rho_trans" nick=""/>
-							<var name="CoolingJacket.rho_trans&#39;" nick="" isY2="TRUE"/>
+							<var name="CoolingJacket.rho_trans&#39;" nick="" isShowed="false" isY2="TRUE"/>
+						</chartStyles>
+					
+					</plot>
+			</plotWindow>
+			<plotWindow title="Plot_5" x="350" y="0" dx="350" dy="250">
+				<plot id="Plot_5" graphType="plot_time">
+						<title value="">
+							<font family="MS Shell Dlg 2"/>
+						</title>
+						<axeX variableName="TIME">
+							<titleAxe value="Tiempo (s)"/>
+							<scale scaleType="auto"/>
+						</axeX>
+						<axeY>
+							<titleAxe value="Temperatura"/>
+							<scale scaleType="auto"/>
+						</axeY>
+						<axeY2 isShowed="TRUE">
+							<titleAxe value=""/>
+							<scale scaleType="auto"/>
+						</axeY2>
+						<layout>
+							<font family="MS Shell Dlg 2" size="12"/>
+							<majorGrid/>
+							<minorGrid/>
+						</layout>
+						<legend>
+							<font family="MS Shell Dlg 2"/>
+						</legend>
+						<chartStyles>
+							<var name="CoolingJacket.g.Tt" nick=""/>
+							<var name="CoolingJacket.g.Tt&#39;" nick="" isShowed="false" isY2="TRUE"/>
 						</chartStyles>
 					
 					</plot>
@@ -338,5 +409,5 @@
 	<alarms globalEnabled="TRUE">
 	</alarms>
 
-	<mainWindow  mode="maximized" currentTab="Tab_3" />
+	<mainWindow  mode="maximized" currentTab="Tab_2" />
 </experiment>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <partitionInfo version="1.0" library="DRLPRUEBAS" component="RL10" partition="offDesign">
-<noDerivatives value="TRUE"/>
+<noDerivatives value="FALSE"/>
 <inhibitReductionConstantCoefEqts value="FALSE"/>
 <generatePartitionClass value="FALSE"/>
 <removeNotUsedVars value="FALSE"/>
@@ -13,11 +13,17 @@
 <boundaries>
   <variable name="LPRES.Altitude"/>
 </boundaries>
+<dynamics>
+  <variable name="CombCha.rho_trans"/>
+  <variable name="CombCha.g.Tt"/>
+  <variable name="CoolingJacket.rho_trans"/>
+  <variable name="CoolingJacket.g.Tt"/>
+</dynamics>
 <algebraics>
-  <variable name="CombCha.M_r"/>
-  <variable name="HeadLoss_Turb.f_in.Tt"/>
-  <variable name="HeadLoss_Turb.f_in.W"/>
+  <variable name="ThrustMonitor.g.W"/>
+  <variable name="CoolingJacket.v"/>
   <variable name="CombCha.p_out_ch"/>
+  <variable name="CombCha.M_r"/>
   <variable name="ThrustMonitor.M_out"/>
   <variable name="Pump_F.U"/>
   <variable name="Pump_O.U"/>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<partitionInfo version="1.0" library="DRLPRUEBAS" component="CC_Cool_OFFD" partition="Transient">
+<partitionInfo version="1.0" library="DRLPRUEBAS" component="RL10" partition="respuesta_cargas">
 <noDerivatives value="FALSE"/>
 <inhibitReductionConstantCoefEqts value="FALSE"/>
 <generatePartitionClass value="FALSE"/>
@@ -10,21 +10,33 @@
 <generateObfuscatedCpp value="FALSE"/>
 <generateParInfoHTML value="TRUE"/>
 <generateMaxSignificantDigits value="FALSE"/>
+<noDatas>
+  <variable name="Tank_F.Tt"/>
+  <variable name="Tank_F.pt"/>
+  <variable name="Tank_O.Tt"/>
+  <variable name="Tank_O.pt"/>
+</noDatas>
 <boundaries>
   <variable name="LPRES.Altitude"/>
+  <variable name="Tank_F.Tt"/>
+  <variable name="Tank_F.pt"/>
+  <variable name="Tank_O.Tt"/>
+  <variable name="Tank_O.pt"/>
 </boundaries>
 <dynamics>
-  <variable name="CombCha_1.rho_trans"/>
-  <variable name="CombCha_1.g.Tt"/>
+  <variable name="CombCha.rho_trans"/>
+  <variable name="CombCha.g.Tt"/>
   <variable name="CoolingJacket.rho_trans"/>
   <variable name="CoolingJacket.g.Tt"/>
 </dynamics>
 <algebraics>
-  <variable name="Injector_O.PR"/>
   <variable name="ThrustMonitor.g.W"/>
-  <variable name="CombCha_1.p_out_ch"/>
-  <variable name="CombCha_1.M_r"/>
   <variable name="CoolingJacket.v"/>
+  <variable name="CombCha.p_out_ch"/>
+  <variable name="CombCha.M_r"/>
   <variable name="ThrustMonitor.M_out"/>
+  <variable name="Pump_F.U"/>
+  <variable name="Pump_O.U"/>
+  <variable name="Turbine.U"/>
 </algebraics>
 </partitionInfo>

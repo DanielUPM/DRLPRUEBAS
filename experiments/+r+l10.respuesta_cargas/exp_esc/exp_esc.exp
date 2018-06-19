@@ -1,43 +1,42 @@
  /*-----------------------------------------------------------------------------------------
  LIBRARY: DRLPRUEBAS
- COMPONENT: CC_Cool_OFFD
- PARTITION: Transient
- EXPERIMENT: expTransient
+ COMPONENT: RL10
+ PARTITION: respuesta_cargas
+ EXPERIMENT: exp_esc
  TEMPLATE: TRANSIENT
- CREATION DATE: 13/06/2018
+ CREATION DATE: 19/06/2018
 -----------------------------------------------------------------------------------------*/
 
-EXPERIMENT expTransient ON CC_Cool_OFFD.Transient
+EXPERIMENT exp_esc ON RL10.respuesta_cargas
    DECLS
    OBJECTS
    INIT
-
       -- initial values for state variables
-      CombCha_1.rho_trans = 1.46
-      CombCha_1.g.Tt = 3170
-      CoolingJacket.rho_trans = 10.26
-      CoolingJacket.g.Tt = 164
+      CombCha.rho_trans = 1
+      CombCha.g.Tt = 2500
+      CoolingJacket.rho_trans = 10
+      CoolingJacket.g.Tt = 100
 
       -- initial values for algebraics
-      Injector_O.PR = 1.06
-      ThrustMonitor.g.W = 19.05
-      CombCha_1.p_out_ch = 4252
-      CoolingJacket.v = 25.25
-      ThrustMonitor.M_out = 4.52
+      ThrustMonitor.g.W = 10
+      CoolingJacket.v = 1000
+      CombCha.p_out_ch = 1000
+      ThrustMonitor.M_out = 10
 
    BOUNDS
       -- Set equations for boundaries: boundVar = f(TIME;...)
       LPRES.Altitude = 9000
+      Tank_F.Tt = step(TIME,20)*50+21.11111
+      Tank_F.pt = step(TIME,20)*50000+193053.2
+      Tank_O.Tt = 98.05556
+      Tank_O.pt = 320606.2
 
    BODY
       -- creates an ASCII file with the results in table format
       -- REPORT_TABLE("results.rpt", "*",TRUE)
 
       -- set the debug level (valid range [0,4])
-      DEBUG_LEVEL= 4 
-		
-		--STEADY()
-		
+      DEBUG_LEVEL= 4   
       -- select default integration solver. Valid methods are IDAS (_SPARSE), DASSL(_SPARSE), CVODE_BDF(_SPARSE), CVODE_AM, RK4, EULER, AM1, AM2 and AM4
       IMETHOD= IDAS -- default is DASSL, recommended is either IDAS or IDAS_SPARSE  
       -- Settings for different actions. Valid actions are: SEV_DISABLE, SEV_NONE, SEV_WARNING, SEV_ERROR, SEV_KILLPOINT, SEV_FATAL
@@ -55,7 +54,7 @@ EXPERIMENT expTransient ON CC_Cool_OFFD.Transient
 
       -- simulate a transient in range[TIME,TSTOP] reporting every CINT
       TIME = 0
-      TSTOP = 15
+      TSTOP = 30
       CINT = 0.01
       INTEG()
 END EXPERIMENT

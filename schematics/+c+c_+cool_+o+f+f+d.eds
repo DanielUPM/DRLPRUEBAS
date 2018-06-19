@@ -128,7 +128,7 @@
 
 	<connector id="Connector_2" sShape="Injector_O" sPort="f_out" eShape="CombCha_1" ePort="f_O" points="742,310"  intermediate1="1" elPosition="1" dx="10" dy="10"  />
 
-	<connector id="Connector_3" sShape="Injector_F" sPort="f_out" eShape="CombCha_1" ePort="f_F" points="612,428"  intermediate2="1" elPosition="2" dx="20" dy="-28"  />
+	<connector id="Connector_3" sShape="Injector_F" sPort="f_out" eShape="CombCha_1" ePort="f_F" points="632,400"  intermediate2="1" elPosition="2"  />
 
 	<connector id="Connector_8" sShape="CombCha_1" sPort="g" eShape="ThrustMonitor" ePort="g" points="716,592 628,592 628,648 716,648"  intermediate2="4" elPosition="3" dx="20" dy="-28"  />
 
