@@ -21,7 +21,7 @@
 </dynamics>
 <algebraics>
   <variable name="GasGen_1.W_F"/>
-  <variable name="CombCha_1_1.f_O.fluid[Comb_prod]"/>
+  <variable name="CombCha_1_1.f_O.W"/>
   <variable name="Injector_F_1.PR"/>
   <variable name="ThrustMonitor.g.W"/>
   <variable name="ThrustMonitor.M_out"/>
