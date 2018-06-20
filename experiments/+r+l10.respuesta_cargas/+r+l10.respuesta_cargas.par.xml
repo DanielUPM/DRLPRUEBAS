@@ -30,8 +30,10 @@
   <variable name="CoolingJacket.g.Tt"/>
 </dynamics>
 <algebraics>
-  <variable name="ThrustMonitor.g.W"/>
   <variable name="CoolingJacket.v"/>
+  <variable name="Injector_O.PR"/>
+  <variable name="Junction.f_in1.W"/>
+  <variable name="ThrustMonitor.g.W"/>
   <variable name="CombCha.p_out_ch"/>
   <variable name="CombCha.M_r"/>
   <variable name="ThrustMonitor.M_out"/>

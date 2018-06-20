@@ -2,13 +2,19 @@
  LIBRARY: DRLPRUEBAS
  COMPONENT: RL10
  PARTITION: respuesta_cargas
- EXPERIMENT: exp_esc
+ EXPERIMENT: exp2
  TEMPLATE: TRANSIENT
  CREATION DATE: 19/06/2018
 -----------------------------------------------------------------------------------------*/
 
-EXPERIMENT exp_esc ON RL10.respuesta_cargas
+EXPERIMENT exp2 ON RL10.respuesta_cargas
    DECLS
+	
+	TABLE_1D tab_T_F = { {0, 32, 34, 50} , {21.11111 , 21.11111 , 71.11111 , 71.11111}}
+	TABLE_1D tab_p_F = { {0, 32, 34, 50} , {193053.2 , 193053.2 , 243053.2 , 243053.2}}
+	TABLE_1D tab_T_O = { {0, 32, 34, 50} , {98.05556 , 98.05556 , 148.05556 , 148.05556}}
+	TABLE_1D tab_p_O = { {0, 32, 34, 50} , {320606.2 , 320606.2 , 370606.2 , 370606.2}}
+		
    OBJECTS
    INIT
       -- initial values for state variables
@@ -18,19 +24,20 @@ EXPERIMENT exp_esc ON RL10.respuesta_cargas
       CoolingJacket.g.Tt = 100
 
       -- initial values for algebraics
-      Injector_F.PR = 1.06
-		ThrustMonitor.g.W = 10
-      CoolingJacket.v = 1000
+      CoolingJacket.v = 100
+      Injector_O.PR = 5
+      Junction.f_in1.W = 2
+      ThrustMonitor.g.W = 10
       CombCha.p_out_ch = 1000
       ThrustMonitor.M_out = 10
 
    BOUNDS
       -- Set equations for boundaries: boundVar = f(TIME;...)
       LPRES.Altitude = 9000
-      Tank_F.Tt = step(TIME,30)*50+21.11111
-      Tank_F.pt = step(TIME,30)*50000+193053.2
-      Tank_O.Tt = step(TIME,30)*50+98.05556
-      Tank_O.pt = step(TIME,30)*50000+320606.2
+      Tank_F.Tt = timeTableInterp (TIME ,tab_T_F)
+      Tank_F.pt = timeTableInterp (TIME ,tab_p_F)
+      Tank_O.Tt = timeTableInterp (TIME ,tab_T_O)
+      Tank_O.pt = timeTableInterp (TIME ,tab_p_O)
 
    BODY
       -- creates an ASCII file with the results in table format

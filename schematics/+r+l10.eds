@@ -49,6 +49,8 @@
 			<datum id="eta_d" value=".573907002" pos="D" />
 			<datum id="phi_d" value="0.0656" pos="D" />
 			<datum id="psi_d" value="0.2533" pos="D" />
+			<datum id="A_in" value="0.00067728" pos="D" />
+			<datum id="r_m" value="0.208304833" pos="D" />
 			<datum id="dp" value="73.58e5" pos="D" />
 		</instanceData>
 	
@@ -64,6 +66,8 @@
 			<datum id="eta_d" value=".6508" pos="D" />
 			<datum id="phi_d" value="0.03027" pos="D" />
 			<datum id="psi_d" value="0.05393" pos="D" />
+			<datum id="A_in" value="0.001411892" pos="D" />
+			<datum id="r_m" value="0.194281146" pos="D" />
 			<datum id="dp" value="42.82e5" pos="D" />
 		</instanceData>
 	
@@ -148,11 +152,13 @@
 
 	<component id="Injector_F" library="LPRES" type="Injector" layer="1"  hotPort="f_out" >
 	
-		<symbol cx="192" cy="126" sx="17" sy="69" dx="362" dy="298" onLabel="true" />
+		<symbol cx="192" cy="126" sx="17" sy="69" dx="360" dy="300" onLabel="true" />
 	
-		<label cx="32.5" cy="12" dx="518.5" dy="456" />
+		<label cx="32.5" cy="12" dx="516.5" dy="458" />
 	
 		<instanceData>
+			<datum id="Type" value="Off_design" pos="P" />
+			<datum id="A" value="0.00175958778" pos="D" />
 			<datum id="W" value="2.70069069" pos="D" />
 		</instanceData>
 	
@@ -165,6 +171,8 @@
 		<label cx="33.5" cy="12" dx="613.5" dy="456" />
 	
 		<instanceData>
+			<datum id="Type" value="Off_design" pos="P" />
+			<datum id="A" value="0.000580606872" pos="D" />
 			<datum id="W" value="16.3526821" pos="D" />
 		</instanceData>
 	
@@ -241,6 +249,8 @@
 			<datum id="alpha_2" value="45." pos="D" />
 			<datum id="alpha_4r" value="-75." pos="D" />
 			<datum id="M" value="1." pos="D" />
+			<datum id="A_in" value="0.000513114" pos="D" />
+			<datum id="r_m" value="0.715229316" pos="D" />
 			<datum id="rpm" value="38172.635" pos="D" />
 			<datum id="pi" value="1.8" pos="D" />
 		</instanceData>
@@ -302,7 +312,7 @@
 
 	<connector id="Connector_5" sShape="Injector_O" sPort="f_out" eShape="CombCha" ePort="f_O" points="618,454"  intermediate1="1"  />
 
-	<connector id="Connector_6" sShape="Injector_F" sPort="f_out" eShape="CombCha" ePort="f_F" points="586,454"  />
+	<connector id="Connector_6" sShape="Injector_F" sPort="f_out" eShape="CombCha" ePort="f_F" points="552,454 586,454"  intermediate1="1"  />
 
 	<connector id="Connector_7" sShape="CombCha" sPort="i" eShape="ControlPanel" ePort="i_Comb"  />
 
@@ -328,7 +338,7 @@
 
 	<connector id="Connector_24" sShape="Junction" sPort="f_out" eShape="HeadLoss_Junct" ePort="f_in" points="366,394"  />
 
-	<connector id="Connector_25" sShape="HeadLoss_Junct" sPort="f_out" eShape="Injector_F" ePort="f_in"  />
+	<connector id="Connector_25" sShape="HeadLoss_Junct" sPort="f_out" eShape="Injector_F" ePort="f_in" points="552,394"  intermediate2="1"  />
 
 	<connector id="Connector_16" sShape="Pump_O" sPort="f_out" eShape="FlowMeter_O" ePort="f_in"  />
 

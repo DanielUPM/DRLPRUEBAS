@@ -10,9 +10,10 @@
 EXPERIMENT exp_lent ON RL10.respuesta_cargas
    DECLS
 	
-	TABLE_1D tab_T = { {0, 3, 12, 15} , {21.11111 , 21.11111 , 71.11111 , 71.11111}}
-	TABLE_1D tab_p = { {0, 3, 12, 15} , {193053.2 , 193053.2 , 243053.2 , 243053.2}}
-
+	TABLE_1D tab_T_F = { {0, 3, 12, 15} , {21.11111 , 21.11111 , 71.11111 , 71.11111}}
+	TABLE_1D tab_p_F = { {0, 3, 12, 15} , {193053.2 , 193053.2 , 243053.2 , 243053.2}}
+	TABLE_1D tab_T_O = { {0, 3, 12, 15} , {98.05556 , 98.05556 , 148.05556 , 148.05556}}
+	TABLE_1D tab_p_O = { {0, 3, 12, 15} , {320606.2 , 320606.2 , 370606.2 , 370606.2}}
 	
    OBJECTS
    INIT
@@ -31,10 +32,10 @@ EXPERIMENT exp_lent ON RL10.respuesta_cargas
    BOUNDS
       -- Set equations for boundaries: boundVar = f(TIME;...)
       LPRES.Altitude = 0
-      Tank_F.Tt = timeTableInterp (TIME ,tab_T)
-      Tank_F.pt = timeTableInterp (TIME ,tab_p)
-      Tank_O.Tt = 98.05556
-      Tank_O.pt = 320606.2
+      Tank_F.Tt = timeTableInterp (TIME ,tab_T_F)
+      Tank_F.pt = timeTableInterp (TIME ,tab_p_F)
+      Tank_O.Tt = timeTableInterp (TIME ,tab_T_O)
+      Tank_O.pt = timeTableInterp (TIME ,tab_p_O)
 
    BODY
       -- creates an ASCII file with the results in table format

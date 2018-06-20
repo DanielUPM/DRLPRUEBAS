@@ -2,12 +2,12 @@
  LIBRARY: DRLPRUEBAS
  COMPONENT: RL10
  PARTITION: respuesta_cargas
- EXPERIMENT: exp_esc
+ EXPERIMENT: exp1
  TEMPLATE: TRANSIENT
  CREATION DATE: 19/06/2018
 -----------------------------------------------------------------------------------------*/
 
-EXPERIMENT exp_esc ON RL10.respuesta_cargas
+EXPERIMENT exp1 ON RL10.respuesta_cargas
    DECLS
    OBJECTS
    INIT
@@ -18,15 +18,20 @@ EXPERIMENT exp_esc ON RL10.respuesta_cargas
       CoolingJacket.g.Tt = 100
 
       -- initial values for algebraics
-      Injector_F.PR = 1.06
-		ThrustMonitor.g.W = 10
-      CoolingJacket.v = 1000
+      CoolingJacket.v = 100
+      Injector_O.PR = 5
+      Junction.f_in1.W = 2
+      ThrustMonitor.g.W = 10
       CombCha.p_out_ch = 1000
       ThrustMonitor.M_out = 10
 
    BOUNDS
       -- Set equations for boundaries: boundVar = f(TIME;...)
       LPRES.Altitude = 9000
+		--Tank_F.Tt = 21.11111
+      --Tank_F.pt = 193053.2
+      --Tank_O.Tt = 98.05556
+      --Tank_O.pt = 320606.2
       Tank_F.Tt = step(TIME,30)*50+21.11111
       Tank_F.pt = step(TIME,30)*50000+193053.2
       Tank_O.Tt = step(TIME,30)*50+98.05556

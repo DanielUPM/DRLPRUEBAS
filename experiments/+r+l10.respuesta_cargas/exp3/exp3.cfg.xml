@@ -157,15 +157,15 @@
 						</title>
 						<axeX variableName="TIME">
 							<titleAxe value="Tiempo (s)"/>
-							<scale minCurrent="-0.18967" maxCurrent="16.9502" scaleType="current"/>
+							<scale minCurrent="-2.05591" maxCurrent="50.125" scaleType="current"/>
 						</axeX>
 						<axeY>
 							<titleAxe value="Densidad"/>
-							<scale minCurrent="0.977184" maxCurrent="1.58304" scaleType="current"/>
+							<scale minCurrent="1.05691" maxCurrent="3.63512" scaleType="current"/>
 						</axeY>
 						<axeY2 isShowed="TRUE">
 							<titleAxe value=""/>
-							<scale minCurrent="-11.9014" maxCurrent="38.5873" scaleType="current"/>
+							<scale minCurrent="-5.25747" maxCurrent="209.596" scaleType="current"/>
 						</axeY2>
 						<layout>
 							<font family="MS Shell Dlg 2" size="12"/>
@@ -189,11 +189,11 @@
 						</title>
 						<axeX variableName="TIME">
 							<titleAxe value="Tiempo (s)"/>
-							<scale minCurrent="-0.09" maxCurrent="17.426" scaleType="current"/>
+							<scale minCurrent="-0.957943" maxCurrent="50.0239" scaleType="current"/>
 						</axeX>
 						<axeY>
 							<titleAxe value="Temperatura"/>
-							<scale minCurrent="2319.06" maxCurrent="3263.38" scaleType="current"/>
+							<scale minCurrent="1612.28" maxCurrent="3705.61" scaleType="current"/>
 						</axeY>
 						<layout>
 							<font family="MS Shell Dlg 2" size="12"/>
@@ -346,15 +346,15 @@
 						</title>
 						<axeX variableName="TIME">
 							<titleAxe value="Tiempo (s)"/>
-							<scale minCurrent="-0.0254831" maxCurrent="19.5809" scaleType="current"/>
+							<scale minCurrent="-10.0583" maxCurrent="60.8209" scaleType="current"/>
 						</axeX>
 						<axeY>
 							<titleAxe value="Temperatura"/>
-							<scale minCurrent="96.8615" maxCurrent="232.939" scaleType="current"/>
+							<scale minCurrent="54.0904" maxCurrent="254.164" scaleType="current"/>
 						</axeY>
 						<axeY2 isShowed="TRUE">
 							<titleAxe value=""/>
-							<scale minCurrent="-10.7846" maxCurrent="23.2347" scaleType="current"/>
+							<scale minCurrent="-21.4774" maxCurrent="28.5408" scaleType="current"/>
 						</axeY2>
 						<layout>
 							<font family="MS Shell Dlg 2" size="12"/>
@@ -436,5 +436,5 @@
 	<alarms globalEnabled="TRUE">
 	</alarms>
 
-	<mainWindow  mode="maximized" currentTab="Tab_2" />
+	<mainWindow  mode="maximized" currentTab="Tab_3" />
 </experiment>
