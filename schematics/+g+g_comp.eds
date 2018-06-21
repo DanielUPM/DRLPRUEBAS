@@ -20,11 +20,15 @@
 	
 	</component>
 
-	<component id="NozzleConDiv_1" library="LPRES" type="NozzleConDiv" layer="1" >
+	<component id="NozzleConDiv_1" library="LPRES" type="NozzleConDiv" layer="1"  hotPort="g_out" >
 	
-		<symbol cx="340" cy="230" sx="88" sy="149" dx="164" dy="244" onLabel="true" />
+		<symbol cx="340" cy="230" sx="88" sy="149" dx="140" dy="244" onLabel="true" />
 	
-		<label cx="51" cy="12" dx="444.5" dy="546" />
+		<label cx="51" cy="12" dx="420.5" dy="546" />
+	
+		<instanceData>
+			<datum id="AR" value="56.88798558" pos="D" />
+		</instanceData>
 	
 	</component>
 
@@ -43,7 +47,7 @@
 	
 	</component>
 
-	<component id="Injector_F" library="LPRES" type="Injector" layer="1"  hotPort="f_out" >
+	<component id="Injector_F" library="LPRES" type="Injector" layer="1"  hotPort="f_in" >
 	
 		<symbol cx="192" cy="126" sx="17" sy="69" dx="176" dy="76" onLabel="true" />
 	
@@ -57,7 +61,7 @@
 	
 	</component>
 
-	<component id="Injector_O" library="LPRES" type="Injector" layer="1"  hotPort="f_out" >
+	<component id="Injector_O" library="LPRES" type="Injector" layer="1"  hotPort="f_in" >
 	
 		<symbol cx="192" cy="126" sx="17" sy="69" dx="416" dy="84" onLabel="true" />
 	
@@ -87,14 +91,39 @@
 	
 	</component>
 
+	<connector id="Connector_3" sShape="LH2_circuit" sPort="f" eShape="Injector_F" ePort="f_in"  />
+
+	<connector id="Connector_4" sShape="LO2_circuit" sPort="f" eShape="Injector_O" ePort="f_in"  intermediate1="1"  />
+
+	<connector id="Connector_6" sShape="NozzleConDiv_1" sPort="g_out" eShape="ThrustMonitor_1" ePort="g" points="516,544"  intermediate1="1"  />
+
+	<component id="GasGen_1" library="LPRES" type="GasGen" layer="1"  hotPort="g" >
+	
+		<symbol cx="220" cy="185" sx="81" sy="115" dx="272" dy="148" onLabel="true" />
+	
+		<label cx="35" cy="12" dx="450.5" dy="388" />
+	
+		<instanceData>
+			<datum id="eta_d" value="0.99" pos="D" />
+			<datum id="Q_comb" value="14.7e6" pos="D" />
+			<datum id="cp_P" value="3700" pos="D" />
+			<datum id="M_P" value="14.25" pos="D" />
+		</instanceData>
+	
+	</component>
+
+	<connector id="Connector_5" sShape="GasGen_1" sPort="g" eShape="NozzleConDiv_1" ePort="g_in"  />
+
+	<connector id="Connector_2" sShape="Injector_O" sPort="f_out" eShape="GasGen_1" ePort="f_O" points="608,240 608,280"  />
+
+	<connector id="Connector_1" sShape="Injector_F" sPort="f_out" eShape="GasGen_1" ePort="f_F" points="368,280"  />
+
 	<bodyEL>
 	<![CDATA[-- EL code of the schematic.
 -- The COMPONENT definition lines are blocked for edition.
 -- You can edit the parameters clicking over them.
 
 COMPONENT %NAME% 
-
-
 END COMPONENT
 ]]>
 	</bodyEL>
