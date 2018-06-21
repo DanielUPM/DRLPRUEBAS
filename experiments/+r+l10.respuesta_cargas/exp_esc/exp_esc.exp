@@ -4,7 +4,7 @@
  PARTITION: respuesta_cargas
  EXPERIMENT: exp_esc
  TEMPLATE: TRANSIENT
- CREATION DATE: 19/06/2018
+ CREATION DATE: 21/06/2018
 -----------------------------------------------------------------------------------------*/
 
 EXPERIMENT exp_esc ON RL10.respuesta_cargas
@@ -18,19 +18,16 @@ EXPERIMENT exp_esc ON RL10.respuesta_cargas
       CoolingJacket.g.Tt = 100
 
       -- initial values for algebraics
-      Injector_F.PR = 1.06
-		ThrustMonitor.g.W = 10
-      CoolingJacket.v = 1000
-      CombCha.p_out_ch = 1000
-      ThrustMonitor.M_out = 10
+      HeadLoss_TF.f_in.W = 10
+      ThrustMonitor.g.W = 10
+      CombCha.p_out_ch = 100
+      ThrustMonitor.M_out = 100
+		Junction.f_in1.Tt = 200
 
    BOUNDS
       -- Set equations for boundaries: boundVar = f(TIME;...)
       LPRES.Altitude = 9000
-      Tank_F.Tt = step(TIME,30)*50+21.11111
-      Tank_F.pt = step(TIME,30)*50000+193053.2
-      Tank_O.Tt = step(TIME,30)*50+98.05556
-      Tank_O.pt = step(TIME,30)*50000+320606.2
+      Regulator_F.dp = step(TIME,30)*500000+3219188.99
 
    BODY
       -- creates an ASCII file with the results in table format

@@ -20,13 +20,14 @@
   <variable name="CoolingJacket.g.Tt"/>
 </dynamics>
 <algebraics>
+  <variable name="CombCha.W_F"/>
+  <variable name="CombCha.phi"/>
+  <variable name="HeadLoss_TF.f_in.W"/>
+  <variable name="Pump_O.U"/>
+  <variable name="Turbine.M_2"/>
   <variable name="ThrustMonitor.g.W"/>
-  <variable name="CoolingJacket.v"/>
   <variable name="CombCha.p_out_ch"/>
   <variable name="CombCha.M_r"/>
   <variable name="ThrustMonitor.M_out"/>
-  <variable name="Pump_F.U"/>
-  <variable name="Pump_O.U"/>
-  <variable name="Turbine.U"/>
 </algebraics>
 </partitionInfo>

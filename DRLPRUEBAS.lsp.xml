@@ -15,6 +15,9 @@
   <file name="CC_Cool_desacop.eds"/>
   <file name="CC_Cool_Turb.eds"/>
   <file name="CC_Cool_TBOFFD.eds"/>
+  <file name="CC_Cool_Bypass.eds"/>
+  <file name="RL10_design.eds"/>
+  <file name="GG_comp.eds"/>
  </filedeps>
  <libdeps>
  </libdeps>

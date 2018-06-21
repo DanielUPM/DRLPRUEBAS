@@ -49,7 +49,9 @@
 			<datum id="eta_d" value=".573907002" pos="D" />
 			<datum id="phi_d" value="0.0656" pos="D" />
 			<datum id="psi_d" value="0.2533" pos="D" />
-			<datum id="A_in" value="0.00067728" pos="D" />
+			<datum id="U_0" value="850" pos="D" />
+			<datum id="Type" value="Off_design" pos="P" />
+			<datum id="A_in" value="0.000677279675" pos="D" />
 			<datum id="r_m" value="0.208304833" pos="D" />
 			<datum id="dp" value="73.58e5" pos="D" />
 		</instanceData>
@@ -66,7 +68,9 @@
 			<datum id="eta_d" value=".6508" pos="D" />
 			<datum id="phi_d" value="0.03027" pos="D" />
 			<datum id="psi_d" value="0.05393" pos="D" />
-			<datum id="A_in" value="0.001411892" pos="D" />
+			<datum id="U_0" value="350" pos="D" />
+			<datum id="Type" value="Off_design" pos="P" />
+			<datum id="A_in" value="0.0014118924" pos="D" />
 			<datum id="r_m" value="0.194281146" pos="D" />
 			<datum id="dp" value="42.82e5" pos="D" />
 		</instanceData>
@@ -92,6 +96,7 @@
 		<label cx="39" cy="12" dx="226" dy="336" />
 	
 		<instanceData>
+			<datum id="Type" value="Known_dp" pos="P" />
 			<datum id="dp" value="3219188.99" pos="D" />
 		</instanceData>
 	
@@ -158,7 +163,7 @@
 	
 		<instanceData>
 			<datum id="Type" value="Off_design" pos="P" />
-			<datum id="A" value="0.00175958778" pos="D" />
+			<datum id="A" value="0.00178349971" pos="D" />
 			<datum id="W" value="2.70069069" pos="D" />
 		</instanceData>
 	
@@ -195,6 +200,8 @@
 			<datum id="Cooled" value="Yes" pos="P" />
 			<datum id="AR_r" value="14" pos="D" />
 			<datum id="A_wet" value="2.521128707" pos="D" />
+			<datum id="T_c0" value="3300" pos="D" />
+			<datum id="W_F0" value="2.7" pos="D" />
 			<datum id="AR" value="56.88798558" pos="D" />
 		</instanceData>
 	
@@ -248,9 +255,10 @@
 			<datum id="eta_d" value=".7353" pos="D" />
 			<datum id="alpha_2" value="45." pos="D" />
 			<datum id="alpha_4r" value="-75." pos="D" />
-			<datum id="M" value="1." pos="D" />
-			<datum id="A_in" value="0.000513114" pos="D" />
-			<datum id="r_m" value="0.715229316" pos="D" />
+			<datum id="M" value="0.1" pos="D" />
+			<datum id="Type" value="Off_design" pos="P" />
+			<datum id="A_in" value="0.000513113762" pos="D" />
+			<datum id="r_m" value="0.715229315" pos="D" />
 			<datum id="rpm" value="38172.635" pos="D" />
 			<datum id="pi" value="1.8" pos="D" />
 		</instanceData>

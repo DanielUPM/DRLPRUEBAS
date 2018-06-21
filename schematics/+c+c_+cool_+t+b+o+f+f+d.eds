@@ -136,6 +136,9 @@
 			<datum id="alpha_2" value="45." pos="D" />
 			<datum id="alpha_4r" value="-75." pos="D" />
 			<datum id="M" value="1." pos="D" />
+			<datum id="Type" value="Off_design" pos="P" />
+			<datum id="A_in" value="0.000667064834" pos="D" />
+			<datum id="r_m" value="0.715093436" pos="D" />
 			<datum id="rpm" value="38172.635" pos="D" />
 			<datum id="pi" value="1.8" pos="D" />
 		</instanceData>
@@ -155,23 +158,23 @@
 	
 	</component>
 
-	<connector id="Connector_1" sShape="LO2_circuit" sPort="f" eShape="Injector_O" ePort="f_in" points="818,260"  intermediate2="1" dx="10" dy="10"  />
+	<connector id="Connector_1" sShape="LO2_circuit" sPort="f" eShape="Injector_O" ePort="f_in" points="828,270"  intermediate2="1"  />
 
-	<connector id="Connector_2" sShape="Injector_O" sPort="f_out" eShape="CombCha_1" ePort="f_O" points="816,400"  intermediate2="1" dx="10" dy="10"  />
+	<connector id="Connector_2" sShape="Injector_O" sPort="f_out" eShape="CombCha_1" ePort="f_O" points="826,410"  intermediate2="1"  />
 
-	<connector id="Connector_3" sShape="Injector_F" sPort="f_out" eShape="CombCha_1" ePort="f_F" points="616,400"  intermediate2="1" dx="10" dy="10"  />
+	<connector id="Connector_3" sShape="Injector_F" sPort="f_out" eShape="CombCha_1" ePort="f_F" points="626,410"  intermediate2="1"  />
 
-	<connector id="Connector_8" sShape="CombCha_1" sPort="g" eShape="ThrustMonitor" ePort="g" points="720,564 632,564 632,620 720,620"  intermediate2="4" dx="10" dy="10"  />
+	<connector id="Connector_8" sShape="CombCha_1" sPort="g" eShape="ThrustMonitor" ePort="g" points="730,574 642,574 642,630 730,630"  intermediate2="4"  />
 
-	<connector id="Connector_5" sShape="LH2_circuit_1" sPort="f" eShape="CoolingJacket" ePort="l" points="168,620 308,620" dx="10" dy="10"  />
+	<connector id="Connector_5" sShape="LH2_circuit_1" sPort="f" eShape="CoolingJacket" ePort="l" points="178,630 318,630"  />
 
-	<connector id="Connector_6" sShape="CombCha_1" sPort="h" eShape="CoolingJacket" ePort="h" points="660,520 344,520"  intermediate1="1" dx="10" dy="10"  />
+	<connector id="Connector_6" sShape="CombCha_1" sPort="h" eShape="CoolingJacket" ePort="h" points="670,530 354,530"  intermediate1="1"  />
 
-	<connector id="Connector_9" sShape="CoolingJacket" sPort="g" eShape="Turbine" ePort="f_in" points="328,480 328,176"  intermediate1="2" dx="10" dy="10"  />
+	<connector id="Connector_9" sShape="CoolingJacket" sPort="g" eShape="Turbine" ePort="f_in" points="338,490 338,186"  intermediate1="2"  />
 
-	<connector id="Connector_7" sShape="Regulator_1" sPort="f_out" eShape="Injector_F" ePort="f_in" points="616,176" dx="10" dy="10"  />
+	<connector id="Connector_7" sShape="Regulator_1" sPort="f_out" eShape="Injector_F" ePort="f_in" points="626,186"  />
 
-	<connector id="Connector_4" sShape="Turbine" sPort="f_out" eShape="Regulator_1" ePort="f_in" dx="10" dy="10"  />
+	<connector id="Connector_4" sShape="Turbine" sPort="f_out" eShape="Regulator_1" ePort="f_in"  />
 
 	<bodyEL>
 	<![CDATA[-- EL code of the schematic.
@@ -179,8 +182,6 @@
 -- You can edit the parameters clicking over them.
 
 COMPONENT %NAME% 
-
-
 END COMPONENT
 ]]>
 	</bodyEL>

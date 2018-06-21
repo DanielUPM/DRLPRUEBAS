@@ -1,25 +1,34 @@
  /*-----------------------------------------------------------------------------------------
  LIBRARY: DRLPRUEBAS
- COMPONENT: RL10
- PARTITION: offDesign
- EXPERIMENT: expoffDesign
+ COMPONENT: CC_Cool_TBOFFD
+ PARTITION: partition1
+ EXPERIMENT: exp1
  TEMPLATE: STEADY
- CREATION DATE: 04/06/2018
+ CREATION DATE: 21/06/2018
 -----------------------------------------------------------------------------------------*/
 
-EXPERIMENT expoffDesign ON RL10.offDesign
+EXPERIMENT exp1 ON CC_Cool_TBOFFD.partition1
    DECLS
    OBJECTS
    INIT
+      -- initial values for state variables
+      CombCha_1.rho_trans = 1
+      CombCha_1.g.Tt = 2500
+      CoolingJacket.rho_trans = 10
+      CoolingJacket.g.Tt = 100
+
       -- initial values for algebraics
-      HeadLoss_Turb.f_in.Tt = 1
-      HeadLoss_Turb.f_in.W = 1
-      CombCha.p_out_ch = 100
-      ThrustMonitor.M_out = 100
+      Injector_F.PR = 10
+      ThrustMonitor.g.W = 10
+      CombCha_1.p_out_ch = 1000
+      CoolingJacket.v = 100
+      ThrustMonitor.M_out = 10
+		Injector_F.f_in.Tt = 200
 
    BOUNDS
       -- Set equations for boundaries: boundVar = f(TIME;...)
       LPRES.Altitude = 9000
+      Turbine.m.N = 3997.42899
 
    BODY
       -- report results in file reportAll.rpt

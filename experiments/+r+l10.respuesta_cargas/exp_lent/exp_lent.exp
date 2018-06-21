@@ -4,16 +4,13 @@
  PARTITION: respuesta_cargas
  EXPERIMENT: exp_lent
  TEMPLATE: TRANSIENT
- CREATION DATE: 19/06/2018
+ CREATION DATE: 21/06/2018
 -----------------------------------------------------------------------------------------*/
 
 EXPERIMENT exp_lent ON RL10.respuesta_cargas
    DECLS
 	
-	TABLE_1D tab_T_F = { {0, 3, 12, 15} , {21.11111 , 21.11111 , 71.11111 , 71.11111}}
-	TABLE_1D tab_p_F = { {0, 3, 12, 15} , {193053.2 , 193053.2 , 243053.2 , 243053.2}}
-	TABLE_1D tab_T_O = { {0, 3, 12, 15} , {98.05556 , 98.05556 , 148.05556 , 148.05556}}
-	TABLE_1D tab_p_O = { {0, 3, 12, 15} , {320606.2 , 320606.2 , 370606.2 , 370606.2}}
+	TABLE_1D tab_p = { {0, 33, 42, 50} , {3219188.99 , 3219188.99 , 3719188.99 , 3719188.99}}
 	
    OBJECTS
    INIT
@@ -24,20 +21,18 @@ EXPERIMENT exp_lent ON RL10.respuesta_cargas
       CoolingJacket.g.Tt = 100
 
       -- initial values for algebraics
+      HeadLoss_TF.f_in.W = 10
       ThrustMonitor.g.W = 10
-      CoolingJacket.v = 1000
-      CombCha.p_out_ch = 1000
-      ThrustMonitor.M_out = 10
+      CombCha.p_out_ch = 100
+      ThrustMonitor.M_out = 100
+		Junction.f_in1.Tt = 200
 
    BOUNDS
       -- Set equations for boundaries: boundVar = f(TIME;...)
-      LPRES.Altitude = 0
-      Tank_F.Tt = timeTableInterp (TIME ,tab_T_F)
-      Tank_F.pt = timeTableInterp (TIME ,tab_p_F)
-      Tank_O.Tt = timeTableInterp (TIME ,tab_T_O)
-      Tank_O.pt = timeTableInterp (TIME ,tab_p_O)
+      LPRES.Altitude = 9000
+      Regulator_F.dp = timeTableInterp (TIME ,tab_p)
 
-   BODY
+    BODY
       -- creates an ASCII file with the results in table format
       -- REPORT_TABLE("results.rpt", "*",TRUE)
 
@@ -60,7 +55,7 @@ EXPERIMENT exp_lent ON RL10.respuesta_cargas
 
       -- simulate a transient in range[TIME,TSTOP] reporting every CINT
       TIME = 0
-      TSTOP = 30
+      TSTOP = 50
       CINT = 0.01
       INTEG()
 END EXPERIMENT
