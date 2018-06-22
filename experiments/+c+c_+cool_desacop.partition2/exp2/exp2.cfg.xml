@@ -49,15 +49,15 @@
 						</title>
 						<axeX variableName="TIME">
 							<titleAxe value="Tiempo (s)"/>
-							<scale minCurrent="-0.085676" maxCurrent="5.82597" scaleType="current"/>
+							<scale minCurrent="-0.715546" maxCurrent="14.6429" scaleType="current"/>
 						</axeX>
 						<axeY>
 							<titleAxe value="Densidad"/>
-							<scale minCurrent="0.982353" maxCurrent="1.78824" scaleType="current"/>
+							<scale minCurrent="1.00331" maxCurrent="1.81725" scaleType="current"/>
 						</axeY>
 						<axeY2 isShowed="TRUE">
 							<titleAxe value=""/>
-							<scale minCurrent="-11.3235" maxCurrent="49.1176" scaleType="current"/>
+							<scale minCurrent="-9.75172" maxCurrent="51.2935" scaleType="current"/>
 						</axeY2>
 						<layout>
 							<font family="MS Shell Dlg 2" size="12"/>
@@ -69,7 +69,7 @@
 						</legend>
 						<chartStyles>
 							<var name="CombCha_1.rho_trans" nick=""/>
-							<var name="CombCha_1.rho_trans&#39;" nick="" isY2="TRUE"/>
+							<var name="CombCha_1.rho_trans&#39;" nick="" isShowed="false" isY2="TRUE"/>
 						</chartStyles>
 					
 					</plot>
@@ -81,15 +81,15 @@
 						</title>
 						<axeX variableName="TIME">
 							<titleAxe value="Tiempo (s)"/>
-							<scale minCurrent="0.0215633" maxCurrent="5.69272" scaleType="current"/>
+							<scale minCurrent="-0.0215633" maxCurrent="15.0296" scaleType="current"/>
 						</axeX>
 						<axeY>
 							<titleAxe value="Temperatura"/>
-							<scale minCurrent="1770.59" maxCurrent="3379.41" scaleType="current"/>
+							<scale minCurrent="1955.88" maxCurrent="3397.06" scaleType="current"/>
 						</axeY>
 						<axeY2 isShowed="TRUE">
 							<titleAxe value=""/>
-							<scale minCurrent="-122941" maxCurrent="37941.2" scaleType="current"/>
+							<scale minCurrent="-104118" maxCurrent="39705.9" scaleType="current"/>
 						</axeY2>
 						<layout>
 							<font family="MS Shell Dlg 2" size="12"/>
@@ -101,7 +101,7 @@
 						</legend>
 						<chartStyles>
 							<var name="CombCha_1.g.Tt" nick=""/>
-							<var name="CombCha_1.g.Tt&#39;" nick="" isY2="TRUE"/>
+							<var name="CombCha_1.g.Tt&#39;" nick="" isShowed="false" isY2="TRUE"/>
 						</chartStyles>
 					
 					</plot>
@@ -115,15 +115,15 @@
 						</title>
 						<axeX variableName="TIME">
 							<titleAxe value="Tiempo (s)"/>
-							<scale minCurrent="-0.0200501" maxCurrent="6.21554" scaleType="current"/>
+							<scale minCurrent="0" maxCurrent="14.9948" scaleType="current"/>
 						</axeX>
 						<axeY>
 							<titleAxe value="Temperatura"/>
-							<scale minCurrent="98.1295" maxCurrent="171.367" scaleType="current"/>
+							<scale minCurrent="102.941" maxCurrent="171.765" scaleType="current"/>
 						</axeY>
 						<axeY2>
 							<titleAxe value=""/>
-							<scale minCurrent="-558.453" maxCurrent="1734.71" scaleType="current"/>
+							<scale minCurrent="-408.088" maxCurrent="1742.65" scaleType="current"/>
 						</axeY2>
 						<layout>
 							<font family="MS Shell Dlg 2" size="12"/>
@@ -135,7 +135,7 @@
 						</legend>
 						<chartStyles>
 							<var name="CoolingJacket.g.Tt" nick=""/>
-							<var name="CoolingJacket.g.Tt&#39;" nick="" isY2="TRUE"/>
+							<var name="CoolingJacket.g.Tt&#39;" nick="" isShowed="false" isY2="TRUE"/>
 						</chartStyles>
 					
 					</plot>
@@ -147,15 +147,15 @@
 						</title>
 						<axeX variableName="TIME">
 							<titleAxe value="Tiempo (s)"/>
-							<scale minCurrent="-0.021164" maxCurrent="6.1164" scaleType="current"/>
+							<scale minCurrent="-0.0440165" maxCurrent="15.0977" scaleType="current"/>
 						</axeX>
 						<axeY>
 							<titleAxe value="Densidad"/>
-							<scale minCurrent="8.93705" maxCurrent="15.8993" scaleType="current"/>
+							<scale minCurrent="9.88787" maxCurrent="15.0993" scaleType="current"/>
 						</axeY>
 						<axeY2>
 							<titleAxe value=""/>
-							<scale minCurrent="-104.496" maxCurrent="392.806" scaleType="current"/>
+							<scale minCurrent="-35.6618" maxCurrent="335.662" scaleType="current"/>
 						</axeY2>
 						<layout>
 							<font family="MS Shell Dlg 2" size="12"/>
@@ -167,7 +167,7 @@
 						</legend>
 						<chartStyles>
 							<var name="CoolingJacket.rho_trans" nick=""/>
-							<var name="CoolingJacket.rho_trans&#39;" nick="" isY2="TRUE"/>
+							<var name="CoolingJacket.rho_trans&#39;" nick="" isShowed="false" isY2="TRUE"/>
 						</chartStyles>
 					
 					</plot>

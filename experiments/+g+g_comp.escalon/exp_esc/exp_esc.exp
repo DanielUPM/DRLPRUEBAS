@@ -1,38 +1,37 @@
  /*-----------------------------------------------------------------------------------------
  LIBRARY: DRLPRUEBAS
- COMPONENT: RL10
- PARTITION: respuesta_cargas
- EXPERIMENT: exp_lent
+ COMPONENT: GG_comp
+ PARTITION: escalon
+ EXPERIMENT: exp_esc
  TEMPLATE: TRANSIENT
- CREATION DATE: 21/06/2018
+ CREATION DATE: 22/06/2018
 -----------------------------------------------------------------------------------------*/
 
-EXPERIMENT exp_lent ON RL10.respuesta_cargas
+EXPERIMENT exp_esc ON GG_comp.escalon
    DECLS
-	
-	TABLE_1D tab_p = { {0, 33, 42, 50} , {3219188.99 , 3219188.99 , 3719188.99 , 3719188.99}}
-	
    OBJECTS
    INIT
-      -- initial values for state variables
-      CombCha.rho_trans = 1
-      CombCha.g.Tt = 2500
-      CoolingJacket.rho_trans = 10
-      CoolingJacket.g.Tt = 100
+       -- initial values for state variables
+      GasGen_1.rho_trans = 1
+      GasGen_1.g.Tt = 2500
 
       -- initial values for algebraics
-      HeadLoss_TF.f_in.W = 10
-      ThrustMonitor.g.W = 10
-      CombCha.p_out_ch = 100
-      ThrustMonitor.M_out = 100
-		Junction.f_in1.Tt = 200
+      Injector_F.PR = 10
+      NozzleConDiv_1.g_in.W = 10
+      NozzleConDiv_1.p_out_ch = 1000
+      ThrustMonitor_1.M_out = 10
 
    BOUNDS
       -- Set equations for boundaries: boundVar = f(TIME;...)
+		LH2_circuit.Tt = step(TIME,3)*5+151.106354
+      LH2_circuit.pt = step(TIME,3)*500000+3494748.63
+      --LH2_circuit.Tt = 151.106354
+      --LH2_circuit.pt = 3494748.63
+      LO2_circuit.Tt = 99.1952397
+      LO2_circuit.pt = 4597104.18
       LPRES.Altitude = 9000
-      Regulator_F.dp = timeTableInterp (TIME ,tab_p)
 
-    BODY
+   BODY
       -- creates an ASCII file with the results in table format
       -- REPORT_TABLE("results.rpt", "*",TRUE)
 
@@ -55,7 +54,7 @@ EXPERIMENT exp_lent ON RL10.respuesta_cargas
 
       -- simulate a transient in range[TIME,TSTOP] reporting every CINT
       TIME = 0
-      TSTOP = 60
+      TSTOP = 15
       CINT = 0.01
       INTEG()
 END EXPERIMENT

@@ -92,7 +92,7 @@ TOPOLOGY
       temp_ch = 0.032)
 
    LPRES.GasGen(
-      Type = Design) GasGen(
+      Type = Off_design) GasGen(
       eta_d = 1,	-- Non default value.
       OF_st = 2.27,	-- Non default value.
       Q_comb = 11e6,	-- Non default value.
@@ -102,7 +102,6 @@ TOPOLOGY
       p_c0 = 5000000,
       T_c0 = 4000,
       W_F0 = 200,	-- Non default value.
-      A_th = 0.05,
       M_oxid = 31.9988,
       M_fuel = 2.01594,
       T_ch = 3000,

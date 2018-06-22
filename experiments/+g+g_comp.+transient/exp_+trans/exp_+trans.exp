@@ -1,28 +1,25 @@
  /*-----------------------------------------------------------------------------------------
  LIBRARY: DRLPRUEBAS
- COMPONENT: CC_Cool_desacop
+ COMPONENT: GG_comp
  PARTITION: Transient
- EXPERIMENT: expTransient
+ EXPERIMENT: exp_Trans
  TEMPLATE: TRANSIENT
- CREATION DATE: 15/06/2018
+ CREATION DATE: 22/06/2018
 -----------------------------------------------------------------------------------------*/
 
-EXPERIMENT expTransient ON CC_Cool_desacop.Transient
+EXPERIMENT exp_Trans ON GG_comp.Transient
    DECLS
    OBJECTS
    INIT
-      -- initial values for state variables
-      CombCha_1.rho_trans = 1
-      CombCha_1.g.Tt = 2500
-      CoolingJacket.rho_trans = 10
-      CoolingJacket.g.Tt = 100
+       -- initial values for state variables
+      GasGen_1.rho_trans = 1
+      GasGen_1.g.Tt = 2500
 
       -- initial values for algebraics
       Injector_F.PR = 10
-      ThrustMonitor.g.W = 10
-      CombCha_1.p_out_ch = 100
-      CoolingJacket.v = 100
-      ThrustMonitor.M_out = 10
+      NozzleConDiv_1.g_in.W = 10
+      NozzleConDiv_1.p_out_ch = 1000
+      ThrustMonitor_1.M_out = 10
 
    BOUNDS
       -- Set equations for boundaries: boundVar = f(TIME;...)

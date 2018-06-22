@@ -150,6 +150,38 @@
 					
 					</plot>
 			</plotWindow>
+			<plotWindow title="Plot_2" x="0" y="0" dx="350" dy="250">
+				<plot id="Plot_2" graphType="plot_time">
+						<title value="">
+							<font family="MS Shell Dlg 2"/>
+						</title>
+						<axeX variableName="TIME">
+							<titleAxe value="Tiempo (s)"/>
+							<scale minCurrent="-0.594122" maxCurrent="30.2106" scaleType="current"/>
+						</axeX>
+						<axeY>
+							<titleAxe value="Densidad"/>
+							<scale minCurrent="0.969343" maxCurrent="1.70508" scaleType="current"/>
+						</axeY>
+						<axeY2 isShowed="TRUE">
+							<titleAxe value=""/>
+							<scale minCurrent="-12.5547" maxCurrent="48.7573" scaleType="current"/>
+						</axeY2>
+						<layout>
+							<font family="MS Shell Dlg 2" size="12"/>
+							<majorGrid/>
+							<minorGrid/>
+						</layout>
+						<legend>
+							<font family="MS Shell Dlg 2"/>
+						</legend>
+						<chartStyles>
+							<var name="CombCha.rho_trans" nick=""/>
+							<var name="CombCha.rho_trans&#39;" nick="" isY2="TRUE"/>
+						</chartStyles>
+					
+					</plot>
+			</plotWindow>
 			<plotWindow title="Plot_3" x="350" y="0" dx="350" dy="250">
 				<plot id="Plot_3" graphType="plot_time">
 						<title value="">
@@ -163,7 +195,7 @@
 							<titleAxe value="Temperatura"/>
 							<scale scaleType="auto"/>
 						</axeY>
-						<axeY2>
+						<axeY2 isShowed="TRUE">
 							<titleAxe value=""/>
 							<scale scaleType="auto"/>
 						</axeY2>
@@ -182,41 +214,9 @@
 					
 					</plot>
 			</plotWindow>
-			<plotWindow title="Plot_2" x="0" y="0" dx="350" dy="250">
-				<plot id="Plot_2" graphType="plot_time">
-						<title value="">
-							<font family="MS Shell Dlg 2"/>
-						</title>
-						<axeX variableName="TIME">
-							<titleAxe value="Tiempo (s)"/>
-							<scale minCurrent="-6.9923" maxCurrent="19.3659" scaleType="current"/>
-						</axeX>
-						<axeY>
-							<titleAxe value="Densidad"/>
-							<scale minCurrent="0.675683" maxCurrent="1.89784" scaleType="current"/>
-						</axeY>
-						<axeY2 isShowed="TRUE">
-							<titleAxe value=""/>
-							<scale minCurrent="-37.0267" maxCurrent="64.8208" scaleType="current"/>
-						</axeY2>
-						<layout>
-							<font family="MS Shell Dlg 2" size="12"/>
-							<majorGrid/>
-							<minorGrid/>
-						</layout>
-						<legend>
-							<font family="MS Shell Dlg 2"/>
-						</legend>
-						<chartStyles>
-							<var name="CombCha.rho_trans" nick=""/>
-							<var name="CombCha.rho_trans&#39;" nick="" isY2="TRUE"/>
-						</chartStyles>
-					
-					</plot>
-			</plotWindow>
 		</tab>
 		<tab name="Tab_3">
-			<plotWindow title="Plot_1" x="0" y="0" dx="350" dy="250">
+			<plotWindow title="Plot_1" x="0" y="0" dx="350" dy="250" state="maximized">
 				<plot id="Plot_1" graphType="plot_time">
 						<title value="">
 							<font family="MS Shell Dlg 2"/>
@@ -248,7 +248,7 @@
 					
 					</plot>
 			</plotWindow>
-			<plotWindow title="Plot_2" x="0" y="0" dx="350" dy="250">
+			<plotWindow title="Plot_2" x="0" y="0" dx="350" dy="250" state="maximized">
 				<plot id="Plot_2" graphType="plot_time">
 						<title value="">
 							<font family="MS Shell Dlg 2"/>
@@ -280,7 +280,7 @@
 					
 					</plot>
 			</plotWindow>
-			<plotWindow title="Plot_3" x="0" y="0" dx="350" dy="250">
+			<plotWindow title="Plot_3" x="0" y="0" dx="350" dy="250" state="maximized">
 				<plot id="Plot_3" graphType="plot_time">
 						<title value="">
 							<font family="MS Shell Dlg 2"/>
@@ -312,22 +312,22 @@
 					
 					</plot>
 			</plotWindow>
-			<plotWindow title="Plot_4" x="0" y="0" dx="350" dy="250">
+			<plotWindow title="Plot_4" x="0" y="0" dx="350" dy="250" state="maximized">
 				<plot id="Plot_4" graphType="plot_time">
 						<title value="">
 							<font family="MS Shell Dlg 2"/>
 						</title>
 						<axeX variableName="TIME">
 							<titleAxe value="Tiempo (s)"/>
-							<scale minCurrent="0.697136" maxCurrent="30.4943" scaleType="current"/>
+							<scale minCurrent="-0.320695" maxCurrent="30.5558" scaleType="current"/>
 						</axeX>
 						<axeY>
 							<titleAxe value="Densidad"/>
-							<scale minCurrent="7.95771" maxCurrent="15.1423" scaleType="current"/>
+							<scale minCurrent="9.1493" maxCurrent="10.4044" scaleType="current"/>
 						</axeY>
 						<axeY2 isShowed="TRUE">
 							<titleAxe value=""/>
-							<scale minCurrent="-197.194" maxCurrent="411.095" scaleType="current"/>
+							<scale minCurrent="-96.3067" maxCurrent="9.9554" scaleType="current"/>
 						</axeY2>
 						<layout>
 							<font family="MS Shell Dlg 2" size="12"/>
@@ -344,7 +344,7 @@
 					
 					</plot>
 			</plotWindow>
-			<plotWindow title="Plot_5" x="350" y="0" dx="350" dy="250">
+			<plotWindow title="Plot_5" x="0" y="0" dx="350" dy="250" state="maximized">
 				<plot id="Plot_5" graphType="plot_time">
 						<title value="">
 							<font family="MS Shell Dlg 2"/>
@@ -414,5 +414,5 @@
 	<alarms globalEnabled="TRUE">
 	</alarms>
 
-	<mainWindow  mode="maximized" currentTab="Tab_2" />
+	<mainWindow  mode="maximized" currentTab="Tab_3" />
 </experiment>

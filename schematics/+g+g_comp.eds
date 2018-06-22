@@ -28,6 +28,9 @@
 	
 		<instanceData>
 			<datum id="AR" value="56.88798558" pos="D" />
+			<datum id="Type" value="Off_design" pos="P" />
+			<datum id="A_th" value="0.0134109877" pos="D" />
+			<datum id="W" value="19.0533729" pos="D" />
 		</instanceData>
 	
 	</component>
@@ -99,9 +102,9 @@
 
 	<component id="GasGen_1" library="LPRES" type="GasGen" layer="1"  hotPort="g" >
 	
-		<symbol cx="220" cy="185" sx="81" sy="115" dx="272" dy="148" onLabel="true" />
+		<symbol cx="236" cy="141" sx="81" sy="115" dx="256" dy="200" onLabel="true" />
 	
-		<label cx="35" cy="12" dx="450.5" dy="388" />
+		<label cx="35" cy="12" dx="450.5" dy="396" />
 	
 		<instanceData>
 			<datum id="eta_d" value="0.99" pos="D" />
@@ -114,9 +117,9 @@
 
 	<connector id="Connector_5" sShape="GasGen_1" sPort="g" eShape="NozzleConDiv_1" ePort="g_in"  />
 
-	<connector id="Connector_2" sShape="Injector_O" sPort="f_out" eShape="GasGen_1" ePort="f_O" points="608,240 608,280"  />
+	<connector id="Connector_2" sShape="Injector_O" sPort="f_out" eShape="GasGen_1" ePort="f_O" points="608,280 496,280"  intermediate2="2"  />
 
-	<connector id="Connector_1" sShape="Injector_F" sPort="f_out" eShape="GasGen_1" ePort="f_F" points="368,280"  />
+	<connector id="Connector_1" sShape="Injector_F" sPort="f_out" eShape="GasGen_1" ePort="f_F" points="368,280 464,280"  intermediate2="2"  />
 
 	<bodyEL>
 	<![CDATA[-- EL code of the schematic.

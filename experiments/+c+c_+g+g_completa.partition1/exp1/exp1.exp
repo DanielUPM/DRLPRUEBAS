@@ -1,24 +1,24 @@
  /*-----------------------------------------------------------------------------------------
  LIBRARY: DRLPRUEBAS
- COMPONENT: CC_Cool_desacop
+ COMPONENT: CC_GG_completa
  PARTITION: partition1
  EXPERIMENT: exp1
  TEMPLATE: STEADY
- CREATION DATE: 15/06/2018
+ CREATION DATE: 22/06/2018
 -----------------------------------------------------------------------------------------*/
 
-EXPERIMENT exp1 ON CC_Cool_desacop.partition1
+EXPERIMENT exp1 ON CC_GG_completa.partition1
    DECLS
    OBJECTS
    INIT
       -- initial values for algebraics
-      Injector_F.PR = 10
-      CombCha_1.p_out_ch = 100
-      ThrustMonitor.M_out = 100
+      ThrustMonitor.M_out = 10
+      CombCha_1.p_out_ch = 1000
 
    BOUNDS
       -- Set equations for boundaries: boundVar = f(TIME;...)
-      CoolingJacket.l.W = 2.70069095
+      FlowMeter_1.f_in.W = 788
+      FlowMeter_1_1.f_in.W = 1789
       LPRES.Altitude = 9000
 
    BODY

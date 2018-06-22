@@ -78,7 +78,7 @@ TOPOLOGY
    )
 
    LPRES.GasGen(
-      Type = Design) GasGen_1(
+      Type = Off_design) GasGen_1(
       eta_d = 0.9,
       OF_st = 8,
       Q_comb = 2000000,
@@ -88,7 +88,6 @@ TOPOLOGY
       p_c0 = 5000000,
       T_c0 = 4000,
       W_F0 = 1000,
-      A_th = 0.05,
       M_oxid = 31.9988,
       M_fuel = 2.01594,
       T_ch = 573.376125,	-- Non default value.
