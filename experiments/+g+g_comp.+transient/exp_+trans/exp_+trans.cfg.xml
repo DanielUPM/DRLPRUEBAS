@@ -41,7 +41,7 @@
 							<titleAxe value="Densidad"/>
 							<scale minCurrent="0.948019" maxCurrent="1.76845" scaleType="current"/>
 						</axeY>
-						<axeY2>
+						<axeY2 isShowed="TRUE">
 							<titleAxe value=""/>
 							<scale minCurrent="-15.1981" maxCurrent="66.8451" scaleType="current"/>
 						</axeY2>
@@ -66,15 +66,15 @@
 							<font family="MS Shell Dlg 2"/>
 						</title>
 						<axeX variableName="TIME">
-							<titleAxe value="TIME"/>
-							<scale minCurrent="-0.00480852" maxCurrent="0.386594" scaleType="current"/>
+							<titleAxe value="Tiempo (s)"/>
+							<scale minCurrent="-0.0453369" maxCurrent="5.92791" scaleType="current"/>
 						</axeX>
 						<axeY>
-							<titleAxe value=""/>
-							<scale minCurrent="1720.46" maxCurrent="3936.33" scaleType="current"/>
+							<titleAxe value="Temperatura (K)"/>
+							<scale minCurrent="1550.11" maxCurrent="3564.12" scaleType="current"/>
 						</axeY>
 						<layout>
-							<font family="MS Shell Dlg 2"/>
+							<font family="MS Shell Dlg 2" size="12"/>
 							<majorGrid/>
 							<minorGrid/>
 						</layout>

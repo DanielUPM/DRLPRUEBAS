@@ -51,7 +51,7 @@
 
 	<component id="GasGen_1" library="LPRES" type="GasGen" layer="1"  hotPort="g" >
 	
-		<symbol cx="236" cy="141" sx="81" sy="115" dx="266" dy="282" onLabel="true" />
+		<symbol cx="220" cy="165" sx="81" sy="115" dx="282" dy="258" onLabel="true" />
 	
 		<label cx="35" cy="12" dx="460.5" dy="479" />
 	
@@ -60,6 +60,9 @@
 			<datum id="Q_comb" value="14.7e6" pos="D" />
 			<datum id="cp_P" value="3500" pos="D" />
 			<datum id="M_P" value="15" pos="D" />
+			<datum id="T_ch" value="1200" pos="D" />
+			<datum id="rho_ch" value="50" pos="D" />
+			<datum id="mfr_ch" value="70" pos="D" />
 		</instanceData>
 	
 	</component>
@@ -145,7 +148,6 @@
 			<datum id="Type" value="Off_design" pos="P" />
 			<datum id="A_th" value="0.648042497" pos="D" />
 			<datum id="p_c" value="68e5" pos="D" />
-			<datum id="W_F0" value="2000" pos="D" />
 		</instanceData>
 	
 	</component>
@@ -194,33 +196,33 @@
 	
 	</component>
 
-	<connector id="Connector_8" sShape="SplitFrac_O" sPort="f_out" eShape="Injector_O" ePort="f_in" dx="10" dy="10"  />
+	<connector id="Connector_8" sShape="SplitFrac_O" sPort="f_out" eShape="Injector_O" ePort="f_in"  />
 
-	<connector id="Connector_2" sShape="SplitFrac_O_1" sPort="f_out" eShape="Injector_F" ePort="f_in" dx="10" dy="10"  />
+	<connector id="Connector_2" sShape="SplitFrac_O_1" sPort="f_out" eShape="Injector_F" ePort="f_in"  />
 
-	<connector id="Connector_3" sShape="CombCha_1" sPort="g" eShape="ThrustMonitor" ePort="g" dx="10" dy="10"  />
+	<connector id="Connector_3" sShape="CombCha_1" sPort="g" eShape="ThrustMonitor" ePort="g"  />
 
-	<connector id="Connector_4" sShape="Injector_O" sPort="f_out" eShape="CombCha_1" ePort="f_O" points="320,384 320,412" dx="10" dy="10"  />
+	<connector id="Connector_4" sShape="Injector_O" sPort="f_out" eShape="CombCha_1" ePort="f_O" points="330,394 330,422"  />
 
-	<connector id="Connector_7" sShape="Injector_F" sPort="f_out" eShape="CombCha_1" ePort="f_F" points="128,412"  intermediate1="2" dx="10" dy="10"  />
+	<connector id="Connector_7" sShape="Injector_F" sPort="f_out" eShape="CombCha_1" ePort="f_F" points="138,422"  intermediate1="2"  />
 
-	<connector id="Connector_9" sShape="SplitFrac_O_1" sPort="f_b" eShape="Injector_F_1" ePort="f_in" points="164,260"  intermediate1="1" dx="10" dy="10"  />
+	<connector id="Connector_9" sShape="SplitFrac_O_1" sPort="f_b" eShape="Injector_F_1" ePort="f_in" points="174,270"  intermediate1="1"  />
 
-	<connector id="Connector_10" sShape="Injector_O_1" sPort="f_out" eShape="GasGen_1" ePort="f_O" points="528,360"  intermediate1="2" dx="10" dy="10"  />
+	<connector id="Connector_10" sShape="Injector_O_1" sPort="f_out" eShape="GasGen_1" ePort="f_O" points="538,370"  intermediate1="2"  />
 
-	<connector id="Connector_13" sShape="Injector_F_1" sPort="f_out" eShape="GasGen_1" ePort="f_F" points="448,360" dx="10" dy="10"  />
+	<connector id="Connector_13" sShape="Injector_F_1" sPort="f_out" eShape="GasGen_1" ePort="f_F" points="458,370"  />
 
-	<connector id="Connector_1" sShape="LO2_circuit_1" sPort="f" eShape="FlowMeter_1_1" ePort="f_in" dx="10" dy="10"  />
+	<connector id="Connector_1" sShape="LO2_circuit_1" sPort="f" eShape="FlowMeter_1_1" ePort="f_in"  />
 
-	<connector id="Connector_6" sShape="LH2_circuit_1" sPort="f" eShape="FlowMeter_1" ePort="f_in" dx="10" dy="10"  />
+	<connector id="Connector_6" sShape="LH2_circuit_1" sPort="f" eShape="FlowMeter_1" ePort="f_in"  />
 
-	<connector id="Connector_14" sShape="FlowMeter_1" sPort="f_out" eShape="SplitFrac_O_1" ePort="f_in" dx="10" dy="10"  />
+	<connector id="Connector_14" sShape="FlowMeter_1" sPort="f_out" eShape="SplitFrac_O_1" ePort="f_in"  />
 
-	<connector id="Connector_15" sShape="FlowMeter_1_1" sPort="f_out" eShape="SplitFrac_O" ePort="f_in" dx="10" dy="10"  />
+	<connector id="Connector_15" sShape="FlowMeter_1_1" sPort="f_out" eShape="SplitFrac_O" ePort="f_in"  />
 
-	<connector id="Connector_5" sShape="GasGen_1" sPort="g" eShape="Nozzle_1" ePort="g" points="480,480"  intermediate1="1" dx="10" dy="10"  />
+	<connector id="Connector_5" sShape="GasGen_1" sPort="g" eShape="Nozzle_1" ePort="g" points="490,490"  intermediate1="1"  />
 
-	<connector id="Connector_11" sShape="SplitFrac_O" sPort="f_b" eShape="Injector_O_1" ePort="f_in" points="364,200 528,200" dx="10" dy="10"  />
+	<connector id="Connector_11" sShape="SplitFrac_O" sPort="f_b" eShape="Injector_O_1" ePort="f_in" points="374,210 538,210"  />
 
 	<bodyEL>
 	<![CDATA[-- EL code of the schematic.
@@ -228,8 +230,6 @@
 -- You can edit the parameters clicking over them.
 
 COMPONENT %NAME% 
-
-
 END COMPONENT
 ]]>
 	</bodyEL>

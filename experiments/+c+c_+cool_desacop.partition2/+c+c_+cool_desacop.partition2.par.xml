@@ -11,12 +11,12 @@
 <generateParInfoHTML value="TRUE"/>
 <generateMaxSignificantDigits value="FALSE"/>
 <noDatas>
-  <variable name="LH2_circuit.Tt"/>
-  <variable name="LH2_circuit.pt"/>
+  <variable name="LH2_circuit_1.Tt"/>
+  <variable name="LH2_circuit_1.pt"/>
 </noDatas>
 <boundaries>
-  <variable name="LH2_circuit.Tt"/>
-  <variable name="LH2_circuit.pt"/>
+  <variable name="LH2_circuit_1.Tt"/>
+  <variable name="LH2_circuit_1.pt"/>
   <variable name="LPRES.Altitude"/>
 </boundaries>
 <dynamics>
