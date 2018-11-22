@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<partitionInfo version="1.0" library="DRLPRUEBAS" component="CC_Cool_desacop" partition="partition1">
-<noDerivatives value="TRUE"/>
+<partitionInfo version="1.0" library="DRLPRUEBAS" component="GG_comp" partition="Transient">
+<noDerivatives value="FALSE"/>
 <inhibitReductionConstantCoefEqts value="FALSE"/>
 <generatePartitionClass value="FALSE"/>
 <removeNotUsedVars value="FALSE"/>
@@ -11,13 +11,16 @@
 <generateParInfoHTML value="TRUE"/>
 <generateMaxSignificantDigits value="FALSE"/>
 <boundaries>
-  <variable name="CoolingJacket.l.W"/>
   <variable name="LPRES.Altitude"/>
 </boundaries>
+<dynamics>
+  <variable name="GasGen_1.rho_trans"/>
+  <variable name="GasGen_1.g.Tt"/>
+</dynamics>
 <algebraics>
   <variable name="Injector_F.PR"/>
-  <variable name="CombCha_1.p_out_ch"/>
-  <variable name="CombCha_1.M_r"/>
-  <variable name="ThrustMonitor.M_out"/>
+  <variable name="NozzleConDiv_1.g_in.W"/>
+  <variable name="NozzleConDiv_1.p_out_ch"/>
+  <variable name="ThrustMonitor_1.M_out"/>
 </algebraics>
 </partitionInfo>

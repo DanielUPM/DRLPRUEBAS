@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<partitionInfo version="1.0" library="DRLPRUEBAS" component="CC_Cool_desacop" partition="partition2">
+<partitionInfo version="1.0" library="DRLPRUEBAS" component="GG_comp" partition="escalon">
 <noDerivatives value="FALSE"/>
 <inhibitReductionConstantCoefEqts value="FALSE"/>
 <generatePartitionClass value="FALSE"/>
@@ -11,26 +11,26 @@
 <generateParInfoHTML value="TRUE"/>
 <generateMaxSignificantDigits value="FALSE"/>
 <noDatas>
-  <variable name="LH2_circuit_1.Tt"/>
-  <variable name="LH2_circuit_1.pt"/>
+  <variable name="LH2_circuit.Tt"/>
+  <variable name="LH2_circuit.pt"/>
+  <variable name="LO2_circuit.Tt"/>
+  <variable name="LO2_circuit.pt"/>
 </noDatas>
 <boundaries>
-  <variable name="LH2_circuit_1.Tt"/>
-  <variable name="LH2_circuit_1.pt"/>
+  <variable name="LH2_circuit.Tt"/>
+  <variable name="LH2_circuit.pt"/>
+  <variable name="LO2_circuit.Tt"/>
+  <variable name="LO2_circuit.pt"/>
   <variable name="LPRES.Altitude"/>
 </boundaries>
 <dynamics>
-  <variable name="CombCha_1.rho_trans"/>
-  <variable name="CombCha_1.g.Tt"/>
-  <variable name="CoolingJacket.rho_trans"/>
-  <variable name="CoolingJacket.g.Tt"/>
+  <variable name="GasGen_1.rho_trans"/>
+  <variable name="GasGen_1.g.Tt"/>
 </dynamics>
 <algebraics>
   <variable name="Injector_F.PR"/>
-  <variable name="ThrustMonitor.g.W"/>
-  <variable name="CombCha_1.p_out_ch"/>
-  <variable name="CombCha_1.M_r"/>
-  <variable name="CoolingJacket.v"/>
-  <variable name="ThrustMonitor.M_out"/>
+  <variable name="NozzleConDiv_1.g_in.W"/>
+  <variable name="NozzleConDiv_1.p_out_ch"/>
+  <variable name="ThrustMonitor_1.M_out"/>
 </algebraics>
 </partitionInfo>

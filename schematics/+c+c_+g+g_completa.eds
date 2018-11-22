@@ -12,105 +12,210 @@
 		<![CDATA[&#60;!DOCTYPE HTML PUBLIC &#34;-//W3C//DTD HTML 4.0//EN&#34; &#34;http://www.w3.org/TR/REC-html40/strict.dtd&#34;&#62;&#60;html&#62;&#60;head&#62;&#60;meta name=&#34;qrichtext&#34; content=&#34;1&#34; /&#62;&#60;style type=&#34;text/css&#34;&#62;p, li { white-space: pre-wrap; }&#60;/style&#62;&#60;/head&#62;&#60;body style=&#34; font-family:&#39;Arial&#39;; font-size:10pt; font-weight:400; font-style:normal;&#34;&#62;&#60;p style=&#34; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&#34;&#62; LIBRARY: DRLPRUEBAS&#60;/p&#62;&#60;p style=&#34; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&#34;&#62; FILE: CC_GG_completa&#60;/p&#62;&#60;p style=&#34; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&#34;&#62; CREATION DATE: 12/06/2018&#60;/p&#62;&#60;/body&#62;&#60;/html&#62;]]>
 	</text>
 
-	<component id="Injector_O" library="LPRES" type="Injector" layer="1" elPosition="2"  hotPort="f_out" >
-	
-		<symbol cx="192" cy="126" sx="17" sy="69" dx="448" dy="172" onLabel="true" />
-	
-		<label cx="33.5" cy="12" dx="596.5" dy="330" />
-	
-	</component>
-
 	<component id="ThrustMonitor" library="LPRES" type="ThrustMonitor" layer="1" elPosition="3"  hotPort="g" >
 	
-		<symbol cx="312" cy="152" sx="121" sy="73.0001" dx="244" dy="528" onLabel="true" />
+		<symbol cx="312" cy="152" sx="121" sy="73.0001" dx="76" dy="528" onLabel="true" />
 	
-		<label cx="43.5" cy="12" dx="505.5" dy="714" />
+		<label cx="43.5" cy="12" dx="337.5" dy="714" />
 	
 	</component>
 
-	<component id="Inlet_1" library="LPRES" type="Inlet" layer="1" elPosition="6"  hotPort="f" >
+	<component id="LO2_circuit_1" library="LPRES" type="Inlet" layer="1" elPosition="7"  hotPort="f" >
 	
-		<symbol cx="208.029" cy="74" sx="64.9412" sy="85" dx="416" dy="-16" onLabel="true" />
+		<symbol cx="208.029" cy="74" sx="64.9412" sy="85" dx="248" dy="16" onLabel="true" />
 	
-		<label cx="23" cy="12" dx="599.029" dy="98" />
+		<label cx="44" cy="12" dx="410.029" dy="130" />
 	
 		<instanceData>
-			<datum id="fluid" value="LH2" pos="D" />
+			<datum id="Tt" value="301.365293" pos="D" />
+			<datum id="pt" value="13101196" pos="D" />
 			<datum id="Type" value="Unknown_W" pos="P" />
 		</instanceData>
-	
-	</component>
-
-	<component id="Inlet_2" library="LPRES" type="Inlet" layer="1" elPosition="7"  hotPort="f" >
-	
-		<symbol cx="208.029" cy="74" sx="64.9412" sy="85" dx="644" dy="4" onLabel="true" />
-	
-		<label cx="23" cy="12" dx="827.029" dy="118" />
-	
-		<instanceData>
-			<datum id="Type" value="Unknown_W" pos="P" />
-		</instanceData>
-	
-	</component>
-
-	<component id="CombCha_1_1" library="LPRES" type="CombCha" layer="1" elPosition="8"  hotPort="g" >
-	
-		<symbol cx="218" cy="150" sx="117" sy="181" dx="320" dy="320" onLabel="true" />
-	
-		<label cx="46.5" cy="12" dx="478" dy="558" />
-	
-		<instanceData>
-			<datum id="p_c" value="50000" pos="D" />
-		</instanceData>
-	
-	</component>
-
-	<component id="Injector_F_1" library="LPRES" type="Injector" layer="1" elPosition="9"  hotPort="f_out" >
-	
-		<symbol cx="192" cy="126" sx="17" sy="69" dx="296" dy="172" onLabel="true" />
-	
-		<label cx="39.5" cy="12" dx="438.5" dy="330" />
 	
 	</component>
 
 	<component id="LH2_circuit_1" library="LPRES" type="Inlet" layer="1" elPosition="10"  hotPort="f" >
 	
-		<symbol cx="208.029" cy="74" sx="64.9412" sy="85" dx="216" dy="-8" onLabel="true" />
+		<symbol cx="208.029" cy="74" sx="64.9412" sy="85" dx="48" dy="8" onLabel="true" />
 	
-		<label cx="43.5" cy="12" dx="371.529" dy="106" />
+		<label cx="43.5" cy="12" dx="203.529" dy="122" />
 	
 		<instanceData>
-			<datum id="fluid" value="H2" pos="D" />
+			<datum id="Tt" value="301.365293" pos="D" />
+			<datum id="pt" value="13101196" pos="D" />
+			<datum id="fluid" value="RP_1" pos="D" />
 			<datum id="Type" value="Unknown_W" pos="P" />
 		</instanceData>
 	
 	</component>
 
-	<connector id="Connector_2" sShape="LH2_circuit_1" sPort="f" eShape="Injector_F_1" ePort="f_in" points="424,268"  intermediate1="2" elPosition="7"  />
-
-	<connector id="Connector_3" sShape="Injector_F_1" sPort="f_out" eShape="CombCha_1_1" ePort="f_F" points="488,344 528,344" elPosition="8"  />
-
-	<connector id="Connector_4" sShape="Injector_O" sPort="f_out" eShape="CombCha_1_1" ePort="f_O" points="640,336 560,336" elPosition="9"  />
-
-	<connector id="Connector_7" sShape="CombCha_1_1" sPort="g" eShape="ThrustMonitor" ePort="g" elPosition="10"  />
-
 	<component id="GasGen_1" library="LPRES" type="GasGen" layer="1" elPosition="11"  hotPort="g" >
 	
-		<symbol cx="220" cy="182" sx="81" sy="117" dx="516" dy="44" onLabel="true" />
+		<symbol cx="236" cy="141" sx="81" sy="115" dx="384" dy="312" onLabel="true" />
 	
-		<label cx="35" cy="12" dx="694.5" dy="282" />
+		<label cx="35" cy="12" dx="578.5" dy="509" />
 	
 		<instanceData>
-			<datum id="OF" value="16" pos="D" />
+			<datum id="eta_d" value="1" pos="D" />
+			<datum id="Q_comb" value="14.7e6" pos="D" />
+			<datum id="cp_P" value="3500" pos="D" />
+			<datum id="M_P" value="15" pos="D" />
+			<datum id="Type" value="Design" pos="P" />
 		</instanceData>
 	
 	</component>
 
-	<connector id="Connector_5" sShape="Inlet_2" sPort="f" eShape="GasGen_1" ePort="f_O" points="852,132 740,132" elPosition="11"  />
+	<component id="Nozzle_1" library="LPRES" type="Nozzle" layer="1" elPosition="14"  hotPort="i" >
+	
+		<symbol cx="362" cy="269.75" sx="85" sy="148.5" dx="316" dy="320" rotation="180" flipY="true" onLabel="true" />
+	
+		<label cx="31" cy="12" dx="641.5" dy="661.5" />
+	
+		<instanceData>
+			<datum id="A" value="0.346776149" pos="D" />
+		</instanceData>
+	
+	</component>
 
-	<connector id="Connector_1" sShape="Inlet_1" sPort="f" eShape="GasGen_1" ePort="f_F" points="708,96"  intermediate1="1" elPosition="12"  />
+	<component id="SplitFrac_O" library="LPRES" type="SplitFrac" layer="1" elPosition="17"  hotPort="f_b" >
+	
+		<symbol cx="244" cy="112" sx="81" sy="49" dx="228" dy="116" rotation="90" flipY="true" onLabel="true" />
+	
+		<label cx="38.5" cy="12" dx="420" dy="250" />
+	
+		<instanceData>
+			<datum id="TPL" value="1" pos="D" />
+		</instanceData>
+	
+	</component>
 
-	<connector id="Connector_6" sShape="GasGen_1" sPort="g" eShape="Injector_O" ePort="f_in" points="640,280"  intermediate2="1" elPosition="13"  />
+	<component id="Injector_O" library="LPRES" type="Injector" layer="1" elPosition="18"  hotPort="f_out" >
+	
+		<symbol cx="192" cy="126" sx="17" sy="69" dx="264" dy="268" onLabel="true" />
+	
+		<label cx="33.5" cy="12" dx="419.5" dy="426" />
+	
+		<instanceData>
+			<datum id="A" value="0.0489035601" pos="D" />
+			<datum id="W" value="1777.23746" pos="D" />
+		</instanceData>
+	
+	</component>
+
+	<component id="Injector_F" library="LPRES" type="Injector" layer="1" elPosition="19"  hotPort="f_out" >
+	
+		<symbol cx="192" cy="126" sx="17" sy="69" dx="64" dy="264" onLabel="true" />
+	
+		<label cx="32.5" cy="12" dx="220.5" dy="422" />
+	
+		<instanceData>
+			<datum id="A" value="0.0143139263" pos="D" />
+			<datum id="W" value="722.652542" pos="D" />
+		</instanceData>
+	
+	</component>
+
+	<connector id="Connector_8" sShape="SplitFrac_O" sPort="f_out" eShape="Injector_O" ePort="f_in" elPosition="23" dx="128" dy="40"  />
+
+	<component id="SplitFrac_O_1" library="LPRES" type="SplitFrac" layer="1" elPosition="20"  hotPort="f_b" >
+	
+		<symbol cx="244" cy="112" sx="81" sy="49" dx="28" dy="180" rotation="90" flipY="true" onLabel="true" />
+	
+		<label cx="45.5" cy="12" dx="206" dy="314" />
+	
+		<instanceData>
+			<datum id="TPL" value="1" pos="D" />
+		</instanceData>
+	
+	</component>
+
+	<connector id="Connector_2" sShape="SplitFrac_O_1" sPort="f_out" eShape="Injector_F" ePort="f_in" elPosition="25" dx="128" dy="40"  />
+
+	<component id="CombCha_1" library="LPRES" type="CombCha" layer="1" elPosition="21"  hotPort="g" >
+	
+		<symbol cx="218" cy="150" sx="117" sy="181" dx="152" dy="388" onLabel="true" />
+	
+		<label cx="39.5" cy="12" dx="324" dy="626" />
+	
+		<instanceData>
+			<datum id="eta_d" value="1" pos="D" />
+			<datum id="OF_st" value="2.27" pos="D" />
+			<datum id="Q_comb" value="11e6" pos="D" />
+			<datum id="cp_P" value="2169" pos="D" />
+			<datum id="M_P" value="23" pos="D" />
+			<datum id="M_fuel" value="172" pos="D" />
+			<datum id="A_th" value="0.637328951" pos="D" />
+			<datum id="p_c" value="68e5" pos="D" />
+			<datum id="W_F0" value="2000" pos="D" />
+		</instanceData>
+	
+	</component>
+
+	<connector id="Connector_3" sShape="CombCha_1" sPort="g" eShape="ThrustMonitor" ePort="g" elPosition="27" dx="128" dy="40"  />
+
+	<connector id="Connector_4" sShape="Injector_O" sPort="f_out" eShape="CombCha_1" ePort="f_O" points="320,384 320,412" elPosition="28" dx="128" dy="40"  />
+
+	<connector id="Connector_7" sShape="Injector_F" sPort="f_out" eShape="CombCha_1" ePort="f_F" points="128,412"  intermediate1="2" elPosition="29" dx="128" dy="40"  />
+
+	<component id="Injector_F_1" library="LPRES" type="Injector" layer="1" elPosition="22"  hotPort="f_out" >
+	
+		<symbol cx="192" cy="126" sx="17" sy="69" dx="384" dy="204" onLabel="true" />
+	
+		<label cx="39.5" cy="12" dx="526.5" dy="362" />
+	
+		<instanceData>
+			<datum id="A" value="0.0143139263" pos="D" />
+			<datum id="W" value="65.3474576" pos="D" />
+		</instanceData>
+	
+	</component>
+
+	<component id="Injector_O_1" library="LPRES" type="Injector" layer="1" elPosition="23"  hotPort="f_in" >
+	
+		<symbol cx="192" cy="126" sx="17" sy="69" dx="464" dy="212" onLabel="true" />
+	
+		<label cx="40.5" cy="12" dx="605.5" dy="370" />
+	
+		<instanceData>
+			<datum id="A" value="0.0489035601" pos="D" />
+			<datum id="W" value="11.7625424" pos="D" />
+		</instanceData>
+	
+	</component>
+
+	<connector id="Connector_9" sShape="SplitFrac_O_1" sPort="f_b" eShape="Injector_F_1" ePort="f_in" points="164,260"  intermediate1="1" elPosition="31" dx="128" dy="40"  />
+
+	<connector id="Connector_10" sShape="Injector_O_1" sPort="f_out" eShape="GasGen_1" ePort="f_O" points="528,360"  intermediate1="2" elPosition="32" dx="128" dy="40"  />
+
+	<connector id="Connector_13" sShape="Injector_F_1" sPort="f_out" eShape="GasGen_1" ePort="f_F" points="448,360" elPosition="33" dx="128" dy="40"  />
+
+	<component id="FlowMeter_1" library="LPRES" type="FlowMeter" layer="1" elPosition="24"  hotPort="f_out" >
+	
+		<symbol cx="244" cy="128" sx="49" sy="73" dx="32" dy="40" onLabel="true" />
+	
+		<label cx="41" cy="12" dx="229" dy="202" />
+	
+	</component>
+
+	<component id="FlowMeter_1_1" library="LPRES" type="FlowMeter" layer="1" elPosition="25"  hotPort="f_out" >
+	
+		<symbol cx="244" cy="128" sx="49" sy="73" dx="424" dy="32" onLabel="true" />
+	
+		<label cx="48" cy="12" dx="607" dy="194" />
+	
+	</component>
+
+	<connector id="Connector_1" sShape="LO2_circuit_1" sPort="f" eShape="FlowMeter_1_1" ePort="f_in" elPosition="34" dx="128" dy="40"  />
+
+	<connector id="Connector_6" sShape="LH2_circuit_1" sPort="f" eShape="FlowMeter_1" ePort="f_in" elPosition="35" dx="128" dy="40"  />
+
+	<connector id="Connector_14" sShape="FlowMeter_1" sPort="f_out" eShape="SplitFrac_O_1" ePort="f_in" elPosition="36" dx="128" dy="40"  />
+
+	<connector id="Connector_15" sShape="FlowMeter_1_1" sPort="f_out" eShape="SplitFrac_O" ePort="f_in" elPosition="37" dx="128" dy="40"  />
+
+	<connector id="Connector_5" sShape="GasGen_1" sPort="g" eShape="Nozzle_1" ePort="g" points="480,480"  intermediate1="1" elPosition="38" dx="128" dy="40"  />
+
+	<connector id="Connector_11" sShape="SplitFrac_O" sPort="f_b" eShape="Injector_O_1" ePort="f_in" points="364,200 528,200" elPosition="39" dx="128" dy="40"  />
 
 	<bodyEL>
 	<![CDATA[-- EL code of the schematic.

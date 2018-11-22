@@ -18,6 +18,7 @@
   <file name="CC_Cool_Bypass.eds"/>
   <file name="RL10_design.eds"/>
   <file name="GG_comp.eds"/>
+  <file name="CC_GG_OFFD.eds"/>
  </filedeps>
  <libdeps>
  </libdeps>

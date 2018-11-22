@@ -55,7 +55,7 @@ EXPERIMENT exp_lent ON RL10.respuesta_cargas
 
       -- simulate a transient in range[TIME,TSTOP] reporting every CINT
       TIME = 0
-      TSTOP = 50
+      TSTOP = 60
       CINT = 0.01
       INTEG()
 END EXPERIMENT

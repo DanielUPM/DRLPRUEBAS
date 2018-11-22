@@ -1,20 +1,25 @@
  /*-----------------------------------------------------------------------------------------
  LIBRARY: DRLPRUEBAS
- COMPONENT: CC_GG_completa
- PARTITION: design
- EXPERIMENT: expSteady
+ COMPONENT: GG_comp
+ PARTITION: OFFD_valid
+ EXPERIMENT: exp_design
  TEMPLATE: STEADY
- CREATION DATE: 13/06/2018
+ CREATION DATE: 21/06/2018
 -----------------------------------------------------------------------------------------*/
 
-EXPERIMENT expSteady ON CC_GG_completa.design
+EXPERIMENT exp_design ON GG_comp.OFFD_valid
    DECLS
    OBJECTS
    INIT
+      -- initial values for state variables
+      GasGen_1.rho_trans = 1
+      GasGen_1.g.Tt = 2500
+
       -- initial values for algebraics
-      GasGen_1.f_F.W = 1
-      ThrustMonitor.M_out = 10
-      CombCha_1_1.p_out_ch = 1000
+      Injector_F.PR = 10
+      NozzleConDiv_1.g_in.W = 10
+      NozzleConDiv_1.p_out_ch = 1000
+      ThrustMonitor_1.M_out = 10
 
    BOUNDS
       -- Set equations for boundaries: boundVar = f(TIME;...)
@@ -24,7 +29,7 @@ EXPERIMENT expSteady ON CC_GG_completa.design
       -- report results in file reportAll.rpt
       REPORT_LIST("reportAll","*",TRUE)
 
-      DEBUG_LEVEL= 1      -- Range 0..4
+      DEBUG_LEVEL= 4      -- Range 0..4
       -- Settings for different actions. Valid actions are: SEV_DISABLE, SEV_NONE, SEV_WARNING, SEV_ERROR, SEV_KILLPOINT and SEV_FATALL
       --eSetErrorAction(ERR_BAD_OPER,SEV_KILLPOINT) -- Detect bad numerical operations (eg division by zero), default is SEV_NONE, recommended is SEV_KILLPOINT
       --eSetErrorAction(ERR_NAN_INF, SEV_KILLPOINT) -- Detect NaN or Inf values, default is SEV_NONE, recommended is SEV_KILLPOINT
